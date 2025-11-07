@@ -1,0 +1,62 @@
+dominio: ventas
+producto_datos: gold.kpi_ventas_diarias
+version: 1.0.0
+proposito: Tablas de KPIs de ventas diarias para BI y planificación comercial.
+owners:
+  - nombre: Equipo Comercial BI
+    contacto: bi-ventas@example.com
+consumidores:
+  - nombre: Dirección Comercial
+    contacto: direccion-comercial@example.com
+  - nombre: Finanzas
+    contacto: finanzas@example.com
+modelo_dimensional:
+  hechos:
+    - nombre: fact_ventas_diarias
+      granularidad: por_dia_por_tienda
+      medidas: [importe_total, unidades, tickets]
+      claves: [fecha_sk, tienda_sk, producto_sk]
+  dimensiones:
+    - dim_fecha: [fecha_sk, dia, mes, anio]
+    - dim_tienda: [tienda_sk, tienda, ciudad, region]
+    - dim_producto: [producto_sk, categoria, subcategoria, marca]
+esquema_tabla:
+  fact_ventas_diarias:
+    fecha_sk: int
+    tienda_sk: int
+    producto_sk: int
+    importe_total: decimal(18,2)
+    unidades: int
+    tickets: int
+slas_slos:
+  frescura_max: "D+1 07:00"
+  disponibilidad_objetivo: 99.9
+  completitud_minima: 99.5
+controles_calidad:
+  reglas:
+    - nombre: no_nulos_claves
+      tipo: not_null
+      columnas: [fecha_sk, tienda_sk, producto_sk]
+    - nombre: rangos_medidas
+      tipo: range
+      columnas:
+        importe_total: {min: 0, max: 10000000}
+        unidades: {min: 0, max: 1000000}
+        tickets: {min: 0, max: 1000000}
+    - nombre: unicidad_granularidad
+      tipo: unique
+      columnas: [fecha_sk, tienda_sk, producto_sk]
+lineage:
+  fuentes: [silver.ventas_detalle, dim.tiendas, dim.productos, dim.fecha]
+  destinos: [dashboards.bi_ventas, export.finanzas]
+seguridad:
+  clasificacion: interno
+  enmascaramiento: []
+  acceso:
+    - rol: bi_read
+      permisos: [select]
+    - rol: finanzas_read
+      permisos: [select]
+compatibilidad:
+  estrategia: aditivo
+  notas: "Agregar nuevas medidas como columnas opcionales; cambios breaking requieren major version"

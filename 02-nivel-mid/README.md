@@ -32,6 +32,14 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Observabilidad (lag, P95, error rate) y alertas
 - Contrato de datos ejemplo: `../04-recursos/contratos-datos/ejemplo_contrato_dominio_pagos.yaml`
 
+### 4. Calidad de Datos y Backfill
+- Notebook: `04_calidad_y_backfill.ipynb`
+- Validaciones: nulos, duplicados, rangos y suite de calidad
+- Aserciones reutilizables (patrón simple en Pandas)
+- Estrategias de backfill (incremental, shadow, completo)
+- Impacto en costo y SLAs; plan de reproceso controlado
+- Contrato BI Gold ejemplo: `../04-recursos/contratos-datos/contrato_bi_gold_kpi_ventas.yaml`
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:
@@ -67,7 +75,7 @@ Diseñar una arquitectura completa que incluya:
 ## Tiempo Estimado (Progresivo)
 
 Duración total estimada al completar todos los módulos: 6–8 semanas.
-Actualmente: 1 módulo disponible.
+Actualmente: 4 módulos disponibles.
 
 ## Recursos Relacionados
 
@@ -77,7 +85,7 @@ Actualmente: 1 módulo disponible.
 
 ## Estado
 
-✅ Módulo 1 disponible  
+✅ Módulos 1–4 disponibles  
 ⏳ Módulos adicionales pendientes de creación
 
 ## Proyecto del Nivel
