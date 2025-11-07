@@ -16,6 +16,14 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Normalización / aplanado de JSON y construcción de tablas de hechos
 - Ejercicio guiado de diseño (retail omnicanal)
 
+### 2. Procesamiento por Lotes y en Tiempo Real + Data Mesh
+- Notebook: `02_procesamiento_batch_streaming_y_data_mesh.ipynb`
+- Diferencias batch vs streaming y latencia
+- Arquitecturas Lambda vs Kappa (impacto en diseño)
+- Principios de Data Mesh (dominios, datos como producto, self-serve, gobernanza)
+- Gestión de eventos: ventanas, watermarks, idempotencia, delivery semantics
+- Orquestación y observabilidad (lag, throughput, SLOs)
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:
