@@ -73,6 +73,14 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - **ADRs (Architecture Decision Records):** Template completo con contexto/decisión/consecuencias/alternativas
 - Ejercicio integrador: Banco multinacional (50M clientes, 10 PB datos, 5 dominios, GDPR/BCBS 239)
 
+### 5. Alineación Estratégica con Modelos de Dominio, Ontologías y Taxonomías
+- Notebook: `05_alineacion_estrategica_modelos_dominio.ipynb`
+- De estrategia → capacidades → dominios → ontología → data products → KPIs
+- Métricas de alineación: coverage, redundancia semántica, time-to-KPI, alignment de productos
+- Governance semántica y policy-as-graph; integración con catálogo y lineage
+- Madurez semántica organizacional y plan de evolución
+- ADR de adopción de ontología empresarial (ejemplo completo)
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados

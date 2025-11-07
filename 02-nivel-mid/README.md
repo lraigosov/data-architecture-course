@@ -78,6 +78,15 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Código: simulador de DataBus pub/sub, microservicios con orquestación
 - Ejercicio integrador: plataforma de streaming con 100M usuarios
 
+### 9. Modelado Semántico y Ontologías Empresariales
+- Notebook: `09_modelado_semantico_ontologias_kg.ipynb`
+- RDF/RDFS/OWL: clases, propiedades, dominio/rango y restricciones básicas
+- SPARQL: consultas sobre grafo para responder preguntas de negocio
+- SKOS: modelado de taxonomías (broader/narrower/related) y clasificación
+- Mapeo de contratos de datos a IRIs (semántica explícita entre datasets)
+- Integración hacia Knowledge Graph (Customer 360, recomendaciones, compliance)
+- Ejercicio: añadir canales de compra y consulta agregada por canal
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

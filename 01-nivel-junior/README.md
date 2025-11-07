@@ -70,6 +70,14 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Reutilización de datos: DRY y Single Source of Truth (SSOT)
 - Ejercicio práctico: transformación Bronze → Silver → Gold con datos e-commerce
 
+### 10. Modelos de Dominio, Ontologías y Taxonomías (Fundamentos)
+- Notebook: `10_modelos_dominio_ontologias_taxonomias.ipynb`
+- Diferencias: dominio vs modelo de dominio vs taxonomía vs ontología vs glosario
+- Beneficios para la estrategia: alineación a KPIs, ownership, calidad, integración y evolución
+- DDD básico aplicado a datos: bounded contexts, ubiquitous language, aggregates
+- Construcción de una taxonomía sencilla y validación con código (Python)
+- Ejercicio: glosario mínimo y clasificación para un caso bancario
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:
