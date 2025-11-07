@@ -18,6 +18,7 @@ El curso se organiza en tres niveles progresivos: **Junior**, **Mid**, y **Senio
 * Diferencias entre sistemas transaccionales (OLTP) y analíticos (OLAP).
 * Conceptos de modelo de datos, metadatos y calidad del dato.
 * Diseño de modelos conceptuales y lógicos (ERD, modelos en estrella y copo de nieve).
+* **Fundamentos de calidad de datos:** Dimensiones (precisión, completitud, consistencia, validez, unicidad, puntualidad), medición y corrección.
 * Ejercicios prácticos: modelado de datos simple con herramientas visuales.
 
 ### Nivel Mid: Arquitecturas y Estrategias de Integración
@@ -29,6 +30,7 @@ El curso se organiza en tres niveles progresivos: **Junior**, **Mid**, y **Senio
 * Arquitecturas Lambda y Kappa (procesamiento batch y streaming).
 * Introducción a arquitecturas cloud y multi-cloud.
 * Diseño de capas de datos: Raw, Curated, Trusted, Gold.
+* **Metadatos, catálogo y linaje:** Tipos de metadatos (técnicos, negocio, operacionales), catálogo centralizado, data lineage (auditoría, impacto, trazabilidad), herramientas (OpenLineage, Atlas, Amundsen, DataHub).
 * Casos de estudio con notebooks de exploración arquitectónica.
 
 ### Nivel Senior: Gobierno, Escalabilidad y Observabilidad
@@ -37,6 +39,11 @@ El curso se organiza en tres niveles progresivos: **Junior**, **Mid**, y **Senio
 
 **Contenidos actuales (notebooks):**
 1. Gobernanza, seguridad y cumplimiento → `03-nivel-senior/01_gobernanza_seguridad_cumplimiento.ipynb`
+   - **Roles y responsabilidades detalladas:** Data Owner, Steward, Custodian, Governance Lead, matriz RACI.
+   - **Políticas de datos:** Clasificación, acceso, retención, calidad (definición y enforcement).
+   - **Procedimientos (workflows):** Solicitud de acceso, cambio de esquema, quality gates.
+   - **Herramientas de gobernanza:** Catálogo (Atlan, Collibra, DataHub), calidad (Great Expectations, Soda), lineage (OpenLineage, Marquez), seguridad (Ranger, Privacera).
+   - Dashboard de métricas de gobierno.
 2. Escalabilidad, rendimiento y costos (FinOps) → `03-nivel-senior/02_escalabilidad_rendimiento_costos.ipynb`
 3. Observabilidad, lineage y automatización → `03-nivel-senior/03_observabilidad_lineage_automatizacion.ipynb`
 

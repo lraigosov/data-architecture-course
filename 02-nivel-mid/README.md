@@ -40,6 +40,15 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Impacto en costo y SLAs; plan de reproceso controlado
 - Contrato BI Gold ejemplo: `../04-recursos/contratos-datos/contrato_bi_gold_kpi_ventas.yaml`
 
+### 5. Metadatos, Catálogo y Linaje de Datos
+- Notebook: `05_metadatos_catalogo_linaje.ipynb`
+- Tipos de metadatos: técnicos, de negocio, operacionales
+- Catálogo de datos: descubrimiento, documentación, gobernanza
+- Data lineage (linaje): table-level y column-level
+- Usos: auditoría, análisis de impacto, cumplimiento (trazabilidad de PII)
+- Herramientas: OpenLineage, Apache Atlas, Amundsen, DataHub, dbt lineage
+- Integración catálogo + linaje + calidad
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

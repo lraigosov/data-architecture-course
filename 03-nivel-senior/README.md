@@ -9,6 +9,12 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 ### 1. Gobernanza, Seguridad y Cumplimiento
 - Notebook: `01_gobernanza_seguridad_cumplimiento.ipynb`
 - Governance (DAMA-DMBOK principios aplicados)
+- **Roles y responsabilidades detalladas:** Data Owner, Steward, Custodian, Governance Lead
+- **Matriz RACI:** Ejemplo para cambio de esquema
+- **Políticas de datos:** Clasificación, acceso, retención, calidad (definición y enforcement)
+- **Procedimientos (workflows):** Solicitud de acceso, cambio de esquema, quality gates
+- **Herramientas de gobernanza:** Catálogo (Atlan, Collibra, DataHub), calidad (Great Expectations, Soda), lineage (OpenLineage, Marquez), seguridad (Ranger, Privacera)
+- **Dashboard de métricas de gobierno:** % datasets con Steward, calidad validada, revisiones de acceso
 - Clasificación y manejo de datos sensibles (PII / GDPR / CCPA)
 - RBAC vs ABAC y controles prácticos
 - Enmascaramiento / derecho al olvido / auditoría

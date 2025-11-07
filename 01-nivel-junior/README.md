@@ -36,6 +36,13 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Esquema estrella y copo de nieve; cuándo desnormalizar
 - Optimización para analítica y ejercicio guiado
 
+### 6. Fundamentos de Calidad de Datos
+- Notebook: `06_fundamentos_calidad_datos.ipynb`
+- Dimensiones de calidad (precisión, completitud, consistencia, validez, unicidad, puntualidad)
+- Medición de calidad con métricas cuantitativas
+- Reglas de calidad como assertions
+- Estrategias de corrección (imputación, deduplicación, filtrado)
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:
