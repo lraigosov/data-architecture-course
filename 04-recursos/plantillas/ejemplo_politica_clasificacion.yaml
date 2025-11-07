@@ -1,0 +1,152 @@
+nombre_politica: "Política de Clasificación de Datos"
+codigo: POL-DATA-001
+version: 1.0.0
+fecha_aprobacion: "2025-11-01"
+aprobador: "Comité de Gobierno de Datos"
+owner: "Data Governance Lead"
+siguiente_revision: "2026-05-01"
+alcance: "Empresa completa"
+
+proposito: |
+  Establecer criterios y procedimientos para clasificar datasets según sensibilidad,
+  asegurando protección adecuada y cumplimiento normativo (GDPR, CCPA).
+
+alcance_detalle:
+  aplica_a:
+    - "Todos los datasets en plataformas analíticas (DW, Lake, Lakehouse)"
+    - "Sistemas: Snowflake, Databricks, BigQuery"
+    - "Roles: Data Owners, Stewards, Custodians"
+  no_aplica_a:
+    - "Datos de prueba en entornos aislados (dev/sandbox)"
+    - "Datasets temporales con TTL < 7 días"
+
+definiciones:
+  PII:
+    descripcion: "Información de identificación personal"
+    ejemplos: ["nombre", "email", "DNI", "teléfono", "dirección"]
+  Regulado:
+    descripcion: "Datos sujetos a normativas específicas"
+    ejemplos: ["GDPR (UE)", "CCPA (California)", "PCI-DSS (pagos)", "HIPAA (salud)"]
+  Clasificaciones:
+    Publico:
+      descripcion: "Datos abiertos, sin restricciones"
+      ejemplos: ["catálogos de productos públicos", "datos de mercado agregados"]
+    Interno:
+      descripcion: "Uso interno, no confidencial"
+      ejemplos: ["métricas operativas agregadas", "logs anonimizados"]
+    Confidencial:
+      descripcion: "Información sensible de negocio"
+      ejemplos: ["estrategias comerciales", "forecasts financieros"]
+    Regulado:
+      descripcion: "PII o datos bajo compliance"
+      ejemplos: ["clientes.email", "transacciones con tarjeta"]
+
+reglas:
+  - id: R1
+    declaracion: "Todo dataset debe clasificarse dentro de 5 días hábiles de creación"
+    excepcion: "Datasets temporales < 7 días TTL"
+  
+  - id: R2
+    declaracion: "Clasificación por defecto = Interno (hasta revisión del Owner)"
+    excepcion: "Ninguna"
+  
+  - id: R3
+    declaracion: "Datasets Regulados requieren aprobación Data Owner + Seguridad para acceso"
+    excepcion: "Steward del dominio (solo lectura en Silver/Gold)"
+  
+  - id: R4
+    declaracion: "Clasificación debe registrarse como tag/label en catálogo de datos"
+    excepcion: "Ninguna"
+  
+  - id: R5
+    declaracion: "Revisión anual de clasificación (o tras cambios significativos en esquema)"
+    excepcion: "Datasets Públicos: revisión cada 2 años"
+
+responsabilidades:
+  data_owner:
+    - "Clasificar datasets de su dominio"
+    - "Aprobar excepciones y accesos a Regulados"
+    - "Revisar clasificación anualmente"
+  data_steward:
+    - "Validar metadatos de clasificación"
+    - "Asistir en revisiones y auditorías"
+    - "Escalar inconsistencias al Owner"
+  data_custodian:
+    - "Implementar tags en catálogo"
+    - "Configurar controles RBAC según clasificación"
+    - "Aplicar cifrado/masking en Regulados"
+  governance_lead:
+    - "Monitorear cumplimiento (dashboard)"
+    - "Reportar métricas al Comité"
+    - "Gestionar excepciones"
+  consumers:
+    - "Respetar restricciones de uso"
+    - "No compartir Confidencial/Regulado sin autorización"
+
+enforcement:
+  controles_tecnicos:
+    - tipo: "Automatización"
+      descripcion: "Catálogo rechaza publicación sin tag de clasificación"
+    - tipo: "Validación"
+      descripcion: "Quality gate valida presencia de metadata.clasificacion"
+    - tipo: "Monitoreo"
+      descripcion: "Dashboard semanal: % clasificados, pendientes, excepciones"
+  
+  controles_proceso:
+    - tipo: "Revisión periódica"
+      frecuencia: "Anual"
+    - tipo: "Auditoría"
+      descripcion: "Logs de cambios de clasificación y accesos"
+    - tipo: "Capacitación"
+      descripcion: "Onboarding obligatorio para nuevos Data Owners"
+  
+  excepciones:
+    proceso: "Solicitud formal con justificación → aprobación Governance Lead → registro en tracker"
+    revision: "Trimestral (evaluar cierre o permanencia)"
+
+metricas:
+  - nombre: "Datasets clasificados (%)"
+    objetivo: ">= 95%"
+    frecuencia: "Semanal"
+  
+  - nombre: "Tiempo medio clasificación (días)"
+    objetivo: "<= 5"
+    frecuencia: "Mensual"
+  
+  - nombre: "Excepciones activas"
+    objetivo: "<= 3"
+    frecuencia: "Mensual"
+  
+  - nombre: "Incidentes de no-cumplimiento"
+    objetivo: "0"
+    frecuencia: "Mensual"
+
+consecuencias_no_cumplimiento:
+  - "Bloqueo de publicación (Bronze → Silver)"
+  - "Escalación a Governance Committee tras 10 días sin clasificación"
+  - "Restricción de acceso a datasets del Owner hasta regularización"
+
+documentos_relacionados:
+  - codigo: "POL-DATA-002"
+    nombre: "Política de Acceso a Datos"
+  - codigo: "PROC-ACCESS-001"
+    nombre: "Procedimiento de Solicitud de Acceso"
+  - codigo: "STD-META-001"
+    nombre: "Estándar de Metadatos de Catálogo"
+
+historial:
+  - version: "1.0.0"
+    fecha: "2025-11-01"
+    autor: "Luis Raigoso"
+    cambios: "Creación inicial"
+
+aprobaciones:
+  - rol: "Governance Lead"
+    nombre: "[Pendiente]"
+    fecha: "2025-11-01"
+  - rol: "Legal / Compliance"
+    nombre: "[Pendiente]"
+    fecha: "2025-11-01"
+  - rol: "CISO"
+    nombre: "[Pendiente]"
+    fecha: "2025-11-01"

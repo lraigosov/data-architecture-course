@@ -19,6 +19,7 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - RBAC vs ABAC y controles prácticos
 - Enmascaramiento / derecho al olvido / auditoría
 - Lineage conceptual y base para catálogo
+- **Ejercicio integrador:** Caso RetailCorp (roles/RACI/clasificación/lineage/políticas/workflow) en `../04-recursos/casos-uso/caso_integrador_gobierno_retail.md`
 
 ### 2. Escalabilidad, Rendimiento y Costos (FinOps de Datos)
 - Notebook: `02_escalabilidad_rendimiento_costos.ipynb`
