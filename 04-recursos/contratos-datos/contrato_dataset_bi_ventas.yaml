@@ -1,0 +1,92 @@
+dominio: ventas
+producto_datos: bi.ventas_diarias
+version: 1.0.0
+proposito: Dataset de ventas diarias para analítica y paneles de negocio.
+owners:
+  - nombre: Equipo Comercial
+    contacto: comercial@example.com
+consumidores:
+  - nombre: Equipo BI
+    contacto: bi@example.com
+  - nombre: Dirección
+    contacto: direccion@example.com
+esquema_tabla:
+  columnas:
+    - nombre: fecha
+      tipo: date
+      descripcion: Fecha del pedido
+      requerido: true
+    - nombre: pedido_id
+      tipo: string
+      descripcion: Identificador del pedido
+      requerido: true
+    - nombre: cliente_id
+      tipo: string
+      descripcion: Identificador del cliente
+      requerido: false
+    - nombre: pais
+      tipo: string
+      descripcion: País del pedido
+      requerido: true
+    - nombre: canal
+      tipo: string
+      descripcion: Canal de venta (online/tienda)
+      requerido: true
+    - nombre: categoria
+      tipo: string
+      descripcion: Categoría de producto
+      requerio: true
+    - nombre: cantidad
+      tipo: integer
+      descripcion: Unidades vendidas
+      requerio: false
+    - nombre: precio_unitario
+      tipo: number
+      descripcion: Precio unitario
+      requerio: true
+    - nombre: total
+      tipo: number
+      descripcion: Importe total
+      requerio: false
+    - nombre: updated_at
+      tipo: timestamp
+      descripcion: Última actualización del registro
+      requerio: true
+slas_slos:
+  frescura_max_min: 60
+  disponibilidad_objetivo: 99.0
+  calidad_minima:
+    nulls_max_pct:
+      cliente_id: 10
+      cantidad: 5
+politicas_calidad:
+  duplicados:
+    claves: [pedido_id]
+    permitido: false
+  rangos:
+    cantidad:
+      min: 0
+      max: 10000
+    precio_unitario:
+      min: 0
+      max: 100000
+seguridad:
+  clasificacion: interno
+  pii: [cliente_id]
+  mascaramiento:
+    - campo: cliente_id
+      estrategia: hash_sha256
+compatibilidad_esquema:
+  estrategia: backward
+lineage:
+  fuentes: [bronze.ventas_raw]
+  destinos: [silver.ventas_diarias, gold.kpi_ventas]
+observabilidad:
+  metricas: [frescura_min, nulls_pct, duplicados, filas]
+  alertas:
+    - nombre: frescura_vencida
+      condicion: frescura_min > 60
+      severidad: alta
+    - nombre: nulls_cliente_alto
+      condicion: nulls_pct.cliente_id > 10
+      severidad: media
