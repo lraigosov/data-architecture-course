@@ -78,6 +78,13 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Construcción de una taxonomía sencilla y validación con código (Python)
 - Ejercicio: glosario mínimo y clasificación para un caso bancario
 
+### 11. Introducción a Cloud para Datos
+- Notebook: `11_introduccion_cloud_para_datos.ipynb`
+- Cloud vs On-Prem: CapEx/OpEx, escalado, time-to-market, seguridad
+- Servicios core: compute, storage, network, analytics, streaming
+- Modelos IaaS/PaaS/SaaS y responsabilidad compartida
+- Beneficios, riesgos iniciales y casos de uso típicos
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

@@ -95,6 +95,15 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Integración con catálogo y contratos de datos (facetas semánticas, API de búsqueda)
 - Ejercicio: extender grafo con KPI Churn y reglas de validación por dominio
 
+### 11. Arquitecturas Cloud y Multi-Cloud (Aplicado)
+- Notebook: `11_arquitecturas_cloud_y_multi_cloud.ipynb`
+- Patrones single-cloud: plataforma consolidada y lakehouse administrado
+- Patrones multi-cloud: replicación activa, especialización, abstracción por capa, data exchange
+- Ventajas vs retos: resiliencia, costos, complejidad operativa, egress, gobernanza
+- Simulador de costos multi-cloud (storage, compute, egress, distribución workloads)
+- Estrategias de optimización: locality, compresión, caching selectivo, acuerdos comerciales
+- Migración por fases y matriz de riesgos/mitigaciones
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

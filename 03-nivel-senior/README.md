@@ -89,6 +89,14 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Métricas de discovery/reuse (SSR, ATD, RR) con simulador y objetivos
 - Caso de estudio y ADR de adopción con metas a 12 meses
 
+### 7. Estrategia Multi-Cloud: Migración, Costos y Gobierno Avanzado
+- Notebook: `07_estrategia_multi_cloud_migracion_costos.ipynb`
+- Framework de decisión single vs multi-cloud (ponderado por criterios)
+- Plan de migración por fases, riesgos y mitigaciones
+- Simulador de asignación de workloads (costos/latencia) entre nubes
+- FinOps multi-cloud: tagging unificado, cost arbitration, budgeting cross-cloud
+- ADR de estrategia multi-cloud y KPIs de éxito (ROI, SSR, savings)
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados
