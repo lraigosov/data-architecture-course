@@ -81,6 +81,14 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Madurez semántica organizacional y plan de evolución
 - ADR de adopción de ontología empresarial (ejemplo completo)
 
+### 6. Gobernanza Semántica y Knowledge Graphs para Discovery/Reutilización
+- Notebook: `06_gobernanza_semantica_y_kg_descubrimiento_reutilizacion.ipynb`
+- Marco de gobernanza de metadatos semánticos (principios, roles, procesos)
+- Arquitectura de referencia: Catálogo + KG + Índice + API de búsqueda
+- Políticas/validación (SHACL) y policy-as-graph integradas al CI/CD
+- Métricas de discovery/reuse (SSR, ATD, RR) con simulador y objetivos
+- Caso de estudio y ADR de adopción con metas a 12 meses
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados

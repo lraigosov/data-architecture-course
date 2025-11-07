@@ -87,6 +87,14 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Integración hacia Knowledge Graph (Customer 360, recomendaciones, compliance)
 - Ejercicio: añadir canales de compra y consulta agregada por canal
 
+### 10. Gobernanza de Metadatos Semánticos y Knowledge Graphs (Aplicado)
+- Notebook: `10_gobernanza_metadatos_semanticos_y_kg.ipynb`
+- Modelo de grafo para discovery/reutilización: Dataset/Table/Column/Concept/Domain/DataProduct/KPI
+- SPARQL para descubrir datasets por concepto/KPI y detectar PII
+- Validación mínima de metadatos (título, dominio) como paso hacia SHACL en CI/CD
+- Integración con catálogo y contratos de datos (facetas semánticas, API de búsqueda)
+- Ejercicio: extender grafo con KPI Churn y reglas de validación por dominio
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:
