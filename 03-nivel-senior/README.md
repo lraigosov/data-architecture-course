@@ -31,10 +31,26 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 
 ### 2. Escalabilidad, Rendimiento y Costos (FinOps de Datos)
 - Notebook: `02_escalabilidad_rendimiento_costos.ipynb`
+- **Dimensionamiento estratégico según 3 V:**
+  - Volumen: Capacity planning con crecimiento proyectado, código de proyección 5 años
+  - Velocidad: Throughput, latencia, SLOs por caso de uso (BI, APIs, ML)
+  - Variedad: Impacto en arquitectura (Lake vs Warehouse)
 - Patrones de optimización (pruning, proyección selectiva, particionamiento, clustering)
 - Modelos de costo (Snowflake, BigQuery, Databricks) y trade-offs
+- **FinOps avanzado:**
+  - Framework: Inform → Optimize → Operate
+  - Chargeback vs Showback con código de atribución de costos
+  - Cost anomaly detection con detección estadística (±2σ) y visualización
+  - Reserved instances, spot instances, right-sizing
+- **Observabilidad avanzada:**
+  - Stack: Prometheus/Datadog → Grafana → PagerDuty
+  - Métricas por capa: ingesta (throughput, lag), procesamiento (CPU, memory, skew), serving (latency, cache hit rate)
+  - Golden Signals: Latency, Traffic, Errors, Saturation
+  - SLOs y error budgets con código de compliance tracking
+  - Dashboard completo (9 paneles) con métricas en tiempo real
 - Estrategias FinOps (right-sizing, scheduling, tiering, Z-order, compaction)
 - Métricas de eficiencia y accountability de costos
+- **Ejercicio integrador avanzado:** Migración multi-cloud con reducción 30% costos
 
 ### 3. Observabilidad, Lineage y Automatización
 - Notebook: `03_observabilidad_lineage_automatizacion.ipynb`

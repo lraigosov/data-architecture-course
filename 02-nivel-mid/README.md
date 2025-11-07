@@ -57,6 +57,17 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Anonimización y masking dinámico: técnicas (supresión, generalización, tokenización, DDM)
 - Ejercicio integrador: diseñar controles para dataset con PII
 
+### 7. Optimización, Dimensionamiento y FinOps
+- Notebook: `07_optimizacion_dimensionamiento_finops.ipynb`
+- Dimensionamiento detallado según 3 V (Volumen, Velocidad, Variedad)
+- Calculadora avanzada de recursos: storage (hot/cold), compute (vCPUs, RAM), network (ancho de banda)
+- Técnicas de optimización: particionamiento, clustering/Z-ordering, compresión (Parquet), materialized views
+- FinOps (Financial Operations): tagging, presupuestos, alertas, chargeback vs showback
+- Modelos de costo multi-cloud: AWS vs Azure vs GCP (comparación detallada)
+- Cost anomaly detection con código
+- Observabilidad: métricas de rendimiento, calidad y costo con dashboards
+- Ejercicio integrador: plataforma de streaming con dimensionamiento y optimización
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

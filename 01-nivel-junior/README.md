@@ -51,6 +51,16 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Controles básicos: autenticación, autorización, encriptación, pseudonimización
 - Amenazas comunes y mitigaciones
 
+### 8. Fundamentos de Escalabilidad y Rendimiento
+- Notebook: `08_fundamentos_escalabilidad_rendimiento.ipynb`
+- Escalabilidad vertical vs horizontal (cuándo usar cada una)
+- Los 3 V del Big Data: Volumen, Velocidad, Variedad
+- Dimensionamiento básico de recursos: storage, compute, network
+- Métricas de rendimiento: throughput, latencia, P95/P99, disponibilidad
+- Introducción a costos en la nube: componentes (storage, compute, egress)
+- Trade-offs rendimiento vs costo
+- Estrategias básicas de optimización
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:
