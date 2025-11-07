@@ -1,93 +1,78 @@
-# Nivel Senior - Gobierno, Seguridad y Escalabilidad
+# Nivel Senior - Gobernanza, Seguridad, Escalabilidad y Observabilidad
 
 ## Objetivo del Nivel
 
-Desarrollar la capacidad para liderar estrategias de gobierno, calidad y evolución arquitectónica.
+Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar plataformas de datos empresariales a escala con criterios de confiabilidad, costo y cumplimiento.
 
-## Contenidos del Módulo
+## Contenidos Actuales
 
-### 1. Gobierno de Datos basado en DAMA-DMBOK
-- Notebook: `01_gobierno_dama_dmbok.ipynb`
-- Marco DAMA-DMBOK 2.0
-- Las 11 áreas de conocimiento
-- Roles y responsabilidades
-- Implementación de gobierno
+### 1. Gobernanza, Seguridad y Cumplimiento
+- Notebook: `01_gobernanza_seguridad_cumplimiento.ipynb`
+- Governance (DAMA-DMBOK principios aplicados)
+- Clasificación y manejo de datos sensibles (PII / GDPR / CCPA)
+- RBAC vs ABAC y controles prácticos
+- Enmascaramiento / derecho al olvido / auditoría
+- Lineage conceptual y base para catálogo
 
-### 2. Catálogos y Linaje de Datos
-- Notebook: `02_catalogos_linaje.ipynb`
-- Data Catalogs (Atlan, Collibra, Google Data Catalog)
-- Linaje de datos (Data Lineage)
-- Metadatos activos
-- Ejercicio práctico de catalogación
+### 2. Escalabilidad, Rendimiento y Costos (FinOps de Datos)
+- Notebook: `02_escalabilidad_rendimiento_costos.ipynb`
+- Patrones de optimización (pruning, proyección selectiva, particionamiento, clustering)
+- Modelos de costo (Snowflake, BigQuery, Databricks) y trade-offs
+- Estrategias FinOps (right-sizing, scheduling, tiering, Z-order, compaction)
+- Métricas de eficiencia y accountability de costos
 
-### 3. Políticas de Seguridad y Privacidad
-- Notebook: `03_seguridad_privacidad.ipynb`
-- Clasificación de datos (PII, PCI, PHI)
-- Control de accesos (RBAC, ABAC)
-- Encriptación en reposo y en tránsito
-- Cumplimiento normativo (GDPR, CCPA)
-- Anonimización y seudonimización
+### 3. Observabilidad, Lineage y Automatización
+- Notebook: `03_observabilidad_lineage_automatizacion.ipynb`
+- Métricas: frescura, completitud, calidad, latencia, error-rate
+- SLOs / SLAs / Error Budgets en datos
+- Eventos OpenLineage y ecosistema (Marquez)
+- Gates de calidad y verificación de contratos en CI/CD
+- Alerting, ownership y manejo de incidentes
 
-### 4. Arquitecturas Resilientes y Observables
-- Notebook: `04_resiliencia_observabilidad.ipynb`
-- Principios de resiliencia
-- Alta disponibilidad y recuperación ante desastres
-- Monitoreo y alertas
-- Auditoría y trazabilidad
-- SLAs y SLOs
-
-### 5. Estrategias FinOps para Datos
-- Notebook: `05_finops_datos.ipynb`
-- Principios de FinOps
-- Optimización de costos de almacenamiento
-- Optimización de costos de procesamiento
-- Estrategias de lifecycle management
-- ROI de arquitecturas de datos
-
-### 6. Arquitectura Integral - Taller Final
-- Notebook: `06_taller_arquitectura_integral.ipynb`
-- Caso de estudio completo
-- Diseño end-to-end
-- Documento de arquitectura profesional
+## Próximas Extensiones (Plan Futuro)
+- Taller integral end-to-end (arquitectura y trade-offs)
+- Ejemplos ampliados de catálogo / data contracts productizados
+- Profundización en Data Privacy Automation y Policy-as-Code
 
 ## Proyecto del Nivel
 
-**Documento de Arquitectura Empresarial**
-
-Componentes:
-1. **Visión y Estrategia:** Objetivos de negocio y roadmap
-2. **Arquitectura Técnica:** Diagramas detallados
-3. **Marco de Gobierno:** Políticas, roles, procesos
-4. **Seguridad y Cumplimiento:** Controles y certificaciones
-5. **FinOps:** Análisis de costos y optimización
-6. **Plan de Implementación:** Fases y entregables
+Elaborar un **Documento de Arquitectura Ejecutiva** que integre:
+1. Estrategia y objetivos de negocio alineados a datos
+2. Dominios y modelo de gobierno (roles, RACI, flujos)
+3. Arquitectura lógica y física (diagramas + decisiones justificadas)
+4. Seguridad, privacidad y cumplimiento (controles técnicos y procesos)
+5. Estrategia de observabilidad (métricas, SLOs, flujos de lineage, alertas)
+6. Optimización y plan FinOps (baseline de costos y roadmap de eficiencia)
+7. Plan de adopción / fases / riesgos / KPIs
 
 ## Evaluación
 
-- **Notebooks y ejercicios:** 30%
-- **Documento de arquitectura:** 40%
-- **Defensa técnica:** 30%
+- Notebooks y ejercicios: 30%
+- Documento ejecutivo: 40%
+- Defensa técnica / revisión arquitectónica: 30%
 
-Evaluación por pares incluida.
-
-Ver detalles en: [Evaluación Nivel Senior](../05-evaluaciones/senior/)
+Incluye peer review y checklist de madurez.
 
 ## Requisitos Previos
 
-- Completar Nivel Mid
-- Experiencia en arquitectura de datos (2+ años recomendado)
-- Comprensión de conceptos de seguridad y compliance
+- Completar Nivel Mid o experiencia equivalente
+- Conocimientos de modelado, pipelines y gobierno básico
+- Familiaridad con un motor analítico cloud (BigQuery, Snowflake o Databricks)
 
 ## Tiempo Estimado
 
-**Duración total:** 8-10 semanas (40-45 horas de estudio)
+6–8 semanas (30–40 horas) dependiendo de profundidad del proyecto final.
 
 ## Certificación
 
-Al completar este nivel con calificación >= 85%, recibirás un certificado de **Arquitecto de Datos Senior**.
+Calificación ≥ 85% otorga certificado **Arquitecto/a de Datos Senior**.
 
 ## Recursos Adicionales
 
-- [Marco DAMA-DMBOK](../04-recursos/dama-dmbok/)
-- [Plantillas de documentación](../04-recursos/plantillas/)
-- [Casos empresariales](../04-recursos/casos-uso/senior/)
+- Principios DAMA-DMBOK (síntesis en recursos internos)
+- Plantillas (RACI, decisión arquitectónica ADR, matriz de riesgos)
+- Ejemplos de SLOs y contratos de datos (ver `../04-recursos/contratos-datos/`)
+
+---
+
+¿Sugerencias o casos que quieras agregar? Abre un issue o PR para evolucionar este nivel.
