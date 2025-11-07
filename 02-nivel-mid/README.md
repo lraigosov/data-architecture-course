@@ -49,6 +49,14 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Herramientas: OpenLineage, Apache Atlas, Amundsen, DataHub, dbt lineage
 - Integración catálogo + linaje + calidad
 
+### 6. Implementación de Controles de Seguridad
+- Notebook: `06_implementacion_controles_seguridad.ipynb`
+- Control de acceso: RBAC (Role-Based) vs ABAC (Attribute-Based) con ejemplos de código
+- Encriptación: at-rest (TDE, KMS) e in-transit (TLS/mTLS)
+- Auditoría y logging: qué auditar, formato de logs, retención y protección
+- Anonimización y masking dinámico: técnicas (supresión, generalización, tokenización, DDM)
+- Ejercicio integrador: diseñar controles para dataset con PII
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

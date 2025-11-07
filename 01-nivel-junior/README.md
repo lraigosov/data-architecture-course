@@ -43,6 +43,14 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Reglas de calidad como assertions
 - Estrategias de corrección (imputación, deduplicación, filtrado)
 
+### 7. Fundamentos de Seguridad y Privacidad de Datos
+- Notebook: `07_fundamentos_seguridad_privacidad.ipynb`
+- Conceptos de seguridad de datos y riesgos comunes
+- Tipos de datos sensibles (PII, PCI, PHI) y clasificación
+- Principios de privacidad (GDPR) y derechos de titulares
+- Controles básicos: autenticación, autorización, encriptación, pseudonimización
+- Amenazas comunes y mitigaciones
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

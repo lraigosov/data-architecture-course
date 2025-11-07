@@ -15,10 +15,18 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - **Procedimientos (workflows):** Solicitud de acceso, cambio de esquema, quality gates
 - **Herramientas de gobernanza:** Catálogo (Atlan, Collibra, DataHub), calidad (Great Expectations, Soda), lineage (OpenLineage, Marquez), seguridad (Ranger, Privacera)
 - **Dashboard de métricas de gobierno:** % datasets con Steward, calidad validada, revisiones de acceso
-- Clasificación y manejo de datos sensibles (PII / GDPR / CCPA)
+- **Security by Design:** Seguridad integrada en todas las fases (ingesta, almacenamiento, procesamiento, exposición, retención)
+- **Arquitectura en capas con controles:** Bronze/Silver/Gold con RBAC, cifrado, masking, auditoría
+- **Segregación de funciones:** Ambientes separados, principio de mínimo privilegio, break-glass
+- Clasificación y manejo de datos sensibles (PII / PCI / PHI)
 - RBAC vs ABAC y controles prácticos
 - Enmascaramiento / derecho al olvido / auditoría
 - Lineage conceptual y base para catálogo
+- **Cumplimiento normativo detallado:**
+  - **GDPR (Unión Europea):** Principios, derechos del titular, DPIA, DPO, notificación 72h, multas hasta 4% ingresos
+  - **CCPA (California, EE.UU.):** Derechos del consumidor, opt-out de venta, diferencias vs GDPR
+  - **Colombia (Ley 1581/2012):** Habeas Data, consentimiento explícito, datos sensibles, registro SIC, sanciones
+- **Monitoreo y reporte de compliance:** Inventario de datos personales, DPIA, políticas/procedimientos, capacitación, auditorías, gestión de incidentes, dashboard de métricas DSAR
 - **Ejercicio integrador:** Caso RetailCorp (roles/RACI/clasificación/lineage/políticas/workflow) en `../04-recursos/casos-uso/caso_integrador_gobierno_retail.md`
 
 ### 2. Escalabilidad, Rendimiento y Costos (FinOps de Datos)
