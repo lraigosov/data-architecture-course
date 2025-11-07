@@ -1,0 +1,63 @@
+dominio: pagos
+producto_datos: pagos.autorizados
+version: 1.0.0
+proposito: Registro de pagos autorizados para analítica y alertas.
+owners:
+  - nombre: Equipo Pagos
+    contacto: pagos-team@example.com
+consumidores:
+  - nombre: Equipo Fraude
+    contacto: fraude@example.com
+  - nombre: Equipo BI
+    contacto: bi@example.com
+esquema_evento:
+  tipo: json-schema
+  version: 2020-12
+  definicion:
+    "$schema": "http://json-schema.org/draft-07/schema#"
+    title: pago.autorizado
+    type: object
+    properties:
+      event_id: { type: string }
+      event_time: { type: string, format: date-time }
+      payment_id: { type: string }
+      order_id: { type: string }
+      amount: { type: number }
+      currency: { type: string }
+      customer_id: { type: string }
+    required: [event_id, event_time, payment_id, amount, currency]
+slas_slos:
+  latencia_p95_ms: 5000
+  frescura_max_min: 15
+  disponibilidad_objetivo: 99.5
+politicas_calidad:
+  nulos_permitidos: false
+  duplicados_permitidos: false
+  rangos:
+    amount:
+      min: 0
+      max: 100000
+seguridad:
+  clasificacion: confidencial
+  pii: [customer_id]
+  encriptacion: at-rest-and-in-transit
+  acceso:
+    - rol: reader_fraude
+      permisos: [read]
+    - rol: reader_bi
+      permisos: [read]
+compatibilidad_esquema:
+  estrategia: backward
+  notas: "Agregar campos como opcionales con defaults, no eliminar campos en minor versions"
+lineage:
+  fuentes: [oltp.payments, oltp.orders]
+  destinos: [silver.pagos_autorizados, gold.kpi_pagos]
+observabilidad:
+  metricas: [lag_ms, throughput_rps, error_rate]
+  alertas:
+    - nombre: p95_latencia_alto
+      condicion: latencia_p95_ms > 5000
+      severidad: alta
+    - nombre: tasa_error
+      condicion: error_rate > 0.01
+      severidad: media

@@ -24,6 +24,14 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Gestión de eventos: ventanas, watermarks, idempotencia, delivery semantics
 - Orquestación y observabilidad (lag, throughput, SLOs)
 
+### 3. Lambda/Kappa Avanzado y Contratos de Datos
+- Notebook: `03_lambda_kappa_event_driven.ipynb`
+- Profundización en patrones Lambda vs Kappa (reprocesos históricos)
+- Flujo CDC→Kafka→Procesamiento→Silver/Gold y SLOs (latencia/frescura)
+- Versionado de esquemas y compatibilidad (backward/forward)
+- Observabilidad (lag, P95, error rate) y alertas
+- Contrato de datos ejemplo: `../04-recursos/contratos-datos/ejemplo_contrato_dominio_pagos.yaml`
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:
