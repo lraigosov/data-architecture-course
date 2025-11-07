@@ -104,6 +104,15 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Estrategias de optimización: locality, compresión, caching selectivo, acuerdos comerciales
 - Migración por fases y matriz de riesgos/mitigaciones
 
+### 12. Diagramas de Componentes y Flujos de Datos (Aplicado)
+- Notebook: `12_diagramas_componentes_flujos_datos.ipynb`
+- C4 Model: 4 niveles de abstracción (Context, Containers, Components, Code)
+- Flujos end-to-end con swimlanes y sequence diagrams
+- Wireframes de arquitectura para diseño iterativo
+- Generación de diagramas con código Mermaid (versionables en Git)
+- Integración con catálogo y lineage para trazabilidad visual
+- Ejercicio: C4 Nivel 2 para lakehouse con anotaciones de latencia
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

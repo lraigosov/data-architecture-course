@@ -97,6 +97,16 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - FinOps multi-cloud: tagging unificado, cost arbitration, budgeting cross-cloud
 - ADR de estrategia multi-cloud y KPIs de éxito (ROI, SSR, savings)
 
+### 8. Visualización Ejecutiva y Análisis de Impacto (Estratégico)
+- Notebook: `08_visualizacion_ejecutiva_analisis_impacto.ipynb`
+- Principios de visualización para ejecutivos: simplicidad, impacto en negocio, sin jerga técnica
+- Value Stream Mapping (VSM) para datos: lead time, process time, wait time, eficiencia
+- Diagramas de decisiones arquitectónicas (ADRs) con trade-offs visualizados
+- Capability maps: desde estrategia de negocio hasta componentes técnicos
+- Cuantificación de impacto: ROI, time-to-insight, reducción de costos
+- Código: simulador VSM, calculadora de impacto con savings anuales
+- Ejercicio integrador: caso banco con capability map, VSM, ADR y slides ejecutivos
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados

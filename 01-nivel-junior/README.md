@@ -85,6 +85,15 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Modelos IaaS/PaaS/SaaS y responsabilidad compartida
 - Beneficios, riesgos iniciales y casos de uso típicos
 
+### 12. Visualización de Arquitecturas (Fundamentos)
+- Notebook: `12_visualizacion_arquitecturas_fundamentos.ipynb`
+- Por qué visualizar: comunicación, alineación, documentación, impacto, decisiones
+- Tipos de diagramas: ERD, DFD, componentes, wireframes, deployment
+- Herramientas básicas: draw.io, Lucidchart, Mermaid, PlantUML, Visio
+- Notación y convenciones: formas, colores, agrupamiento
+- Comunicación por audiencia: ejecutivos, negocio, técnicos, operaciones
+- Ejercicio práctico: diagrama de 3 capas con adaptación por stakeholder
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:
