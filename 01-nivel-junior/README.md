@@ -24,18 +24,17 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Metadatos y su importancia
 - Calidad del dato
 
-### 4. Modelos Conceptuales y Lógicos
-- Notebook: `04_modelos_erd.ipynb`
-- Diagramas Entidad-Relación (ERD)
-- Normalización de datos
-- Ejercicio práctico: diseño de un modelo conceptual
+### 4. Tres Esquemas: Conceptual, Lógico y Físico
+- Notebook: `04_modelado_tres_esquemas.ipynb`
+- Vistas externas, modelo conceptual (ERD) y modelo físico
+- Normalización (1FN–3FN) con ejemplos
+- Ejercicio práctico breve
 
-### 5. Modelos Dimensionales
-- Notebook: `05_modelos_estrella_copo_nieve.ipynb`
-- Modelo en estrella (Star Schema)
-- Modelo en copo de nieve (Snowflake Schema)
-- Tablas de hechos y dimensiones
-- Ejercicio práctico: diseño de un Data Mart
+### 5. Modelado Dimensional (Analítica)
+- Notebook: `05_modelado_dimensional.ipynb`
+- Hechos y dimensiones, granularidad
+- Esquema estrella y copo de nieve; cuándo desnormalizar
+- Optimización para analítica y ejercicio guiado
 
 ## Ejercicios Prácticos
 
