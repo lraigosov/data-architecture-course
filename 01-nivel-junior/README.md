@@ -61,6 +61,15 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Trade-offs rendimiento vs costo
 - Estrategias básicas de optimización
 
+### 9. Introducción a Patrones Arquitectónicos
+- Notebook: `09_introduccion_patrones_arquitectonicos.ipynb`
+- ¿Qué son los patrones arquitectónicos? Ventajas y desventajas
+- Arquitectura en capas: Bronze / Silver / Gold (Medallion Architecture)
+- Monolítica vs Distribuida: comparación y trade-offs
+- Event-Driven Architecture: eventos como mecanismo de comunicación
+- Reutilización de datos: DRY y Single Source of Truth (SSOT)
+- Ejercicio práctico: transformación Bronze → Silver → Gold con datos e-commerce
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

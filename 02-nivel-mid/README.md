@@ -68,6 +68,16 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Observabilidad: métricas de rendimiento, calidad y costo con dashboards
 - Ejercicio integrador: plataforma de streaming con dimensionamiento y optimización
 
+### 8. Patrones de Arquitectura de Datos
+- Notebook: `08_patrones_arquitectura_datos.ipynb`
+- Data Bus: comunicación desacoplada entre sistemas (Kafka, Kinesis, Event Hub, Pub/Sub)
+- Microservicios de datos: bounded contexts, ownership, API-first, autonomía
+- Event-Driven Architecture detallada: Event Sourcing, CQRS, garantías de entrega
+- Patrones de interoperabilidad: contratos de datos (schemas, SLAs, consumers)
+- Data as a Product: principios, customer 360 como ejemplo
+- Código: simulador de DataBus pub/sub, microservicios con orquestación
+- Ejercicio integrador: plataforma de streaming con 100M usuarios
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

@@ -60,6 +60,19 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Gates de calidad y verificación de contratos en CI/CD
 - Alerting, ownership y manejo de incidentes
 
+### 4. Arquitecturas de Referencia y Patrones Avanzados
+- Notebook: `04_arquitecturas_referencia.ipynb`
+- **Evolución histórica:** Data Warehouse (1990s) → Data Lake (2010s) → Lakehouse (2020s) → Data Mesh (futuro)
+- **Arquitecturas tradicionales:** Data Warehouse (Inmon), Data Lake (Hadoop) con ventajas/limitaciones
+- **Arquitecturas modernas:** Lakehouse (Delta/Iceberg/Hudi), Data Mesh con 4 principios
+- **Comparativa detallada:** Tabla DW/Lake/Lakehouse/Mesh según 10 dimensiones
+- **Trade-offs:** Centralizado vs descentralizado, batch vs streaming vs Lambda/Kappa
+- **Framework de decisión:** Código con evaluación ponderada de arquitecturas, radar chart comparativo
+- **Data Mesh profundo:** Anatomía data product con contrato completo, self-serve platform, federated governance
+- **Data Product Registry:** Simulador con registro, discovery, métricas de uso, health reports con SLA compliance
+- **ADRs (Architecture Decision Records):** Template completo con contexto/decisión/consecuencias/alternativas
+- Ejercicio integrador: Banco multinacional (50M clientes, 10 PB datos, 5 dominios, GDPR/BCBS 239)
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados
