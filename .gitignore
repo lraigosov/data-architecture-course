@@ -1,5 +1,5 @@
-# Archivo específico a ignorar
-estructura_propuesta.md
+# Archivo específico previamente ignorado (se incluye ahora en control de versiones)
+# estructura_propuesta.md
 
 # Archivos del sistema
 .DS_Store
@@ -71,3 +71,4 @@ wheels/
 *.xml
 !example*.csv
 !sample*.json
+!ejemplo_ventas.csv

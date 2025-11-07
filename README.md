@@ -37,16 +37,17 @@ El programa se organiza en **tres niveles progresivos**:
 
 **Ubicación:** [`02-nivel-mid/`](./02-nivel-mid/)
 
-### 📕 Nivel Senior - Gobierno y Escalabilidad (8-10 semanas)
+### 📕 Nivel Senior - Gobierno, Escalabilidad y Observabilidad (8-10 semanas)
 
-**Objetivo:** Liderar estrategias de gobierno y evolución arquitectónica.
+**Objetivo:** Liderar estrategias de gobierno, seguridad, optimización y operación confiable a escala.
 
-**Temas planificados:**
-- Gobierno de Datos (DAMA-DMBOK)
-- Catálogos y linaje de datos
-- Seguridad y privacidad
-- Resiliencia y observabilidad
-- FinOps para datos
+**Contenidos disponibles:**
+- ✅ Gobernanza, seguridad y cumplimiento → `03-nivel-senior/01_gobernanza_seguridad_cumplimiento.ipynb`
+- ✅ Escalabilidad, rendimiento y costos (FinOps) → `03-nivel-senior/02_escalabilidad_rendimiento_costos.ipynb`
+- ✅ Observabilidad, lineage y automatización → `03-nivel-senior/03_observabilidad_lineage_automatizacion.ipynb`
+
+Recursos de apoyo:
+- Dataset de ejemplo para métricas: `04-recursos/datasets/ejemplo_ventas.csv`
 
 **Ubicación:** [`03-nivel-senior/`](./03-nivel-senior/)
 
