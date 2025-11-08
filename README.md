@@ -133,6 +133,16 @@ jupyter notebook
 - **Referencias:** [`04-recursos/referencias.md`](./04-recursos/referencias.md) - Bibliografía curada
 - **Casos de uso:** [`04-recursos/casos-uso/`](./04-recursos/casos-uso/) - Escenarios reales
 
+## Estándares y Buenas Prácticas
+
+Para garantizar consistencia, calidad y gobernanza transversal en el curso, consulta las siguientes guías:
+
+- **Mejores prácticas de arquitectura de datos:** [`docs/mejores_practicas_arquitectura_datos.md`](./docs/mejores_practicas_arquitectura_datos.md)
+- **Estándar de notebooks:** [`docs/estandar_notebooks.md`](./docs/estandar_notebooks.md)
+- **Checklist de revisión de arquitectura/data products:** [`docs/checklist_revision_arquitectura.md`](./docs/checklist_revision_arquitectura.md)
+
+Estas referencias complementan los contenidos técnicos y sirven para revisiones, contribuciones y preparación de proyectos finales.
+
 ## Preguntas Frecuentes
 
 **¿Necesito experiencia previa?**  
