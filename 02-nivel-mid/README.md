@@ -228,8 +228,16 @@ Actualmente: 4 módulos disponibles.
 - Modelo dummy/logístico con umbral y tasa de alertas
 - Extensiones: Kafka/Pulsar, Feature Store online, endpoint de inferencia, router de tráfico
 
+### 20. Vector Search y Embeddings (Introducción Práctica)
+- Notebook: `20_vector_search_embeddings_similitud.ipynb`
+- Fundamentos de embeddings y búsqueda por similitud (coseno)
+- Generación sintética de vectores y top-k exacto vs aproximado (conceptual)
+- Re-ranking con segundo vector de contexto
+- Limitaciones del brute force y motivación de ANN (FAISS/Milvus/Qdrant)
+- Ejercicios: medir impacto de dimensión y cardinalidad, comparar métricas
+
 ## Estado
-✅ Módulos 1–19 disponibles  
+✅ Módulos 1–20 disponibles  
 ⏳ Más módulos por venir (iteraciones y profundizaciones)
 
 ## Proyecto del Nivel
