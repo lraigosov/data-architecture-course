@@ -24,6 +24,12 @@ El programa se organiza en **tres niveles progresivos**:
 
 **Ubicación:** [`01-nivel-junior/`](./01-nivel-junior/)
 
+### 🆕 Novedades destacadas (Q4 2025)
+- Big Data de última generación (formatos columnares y frameworks): `01-nivel-junior/16_fundamentos_big_data_nube.ipynb`, `02-nivel-mid/16_frameworks_big_data_modernos_comparativo.ipynb`
+- Arquitecturas descentralizadas y Gov-Ready (Data Mesh, Data Fabric, Capa Semántica): `01-nivel-junior/17_intro_arquitecturas_descentralizadas_data_mesh_fabric_semantica.ipynb`, `02-nivel-mid/17_mini_data_mesh_dos_dominios_catalogo_compartido.ipynb`, `03-nivel-senior/13_transicion_centralizado_a_mesh_fabric_taller_evaluacion.ipynb`
+- Observabilidad, Metadata, Linaje y Gobierno para IA/Big Data: `02-nivel-mid/18_observabilidad_metadata_linaje_ia_bigdata_simulacion.ipynb`, `03-nivel-senior/14_gobernanza_ia_ready_politicas_privacidad_sesgo_taller.ipynb`
+- Tiempo real, Edge & Streaming para IA/Big Data: `01-nivel-junior/18_fundamentos_streaming_edge_cloud.ipynb`, `02-nivel-mid/19_streaming_inferencia_tiempo_real_caso_practico.ipynb`, `03-nivel-senior/15_arquitectura_iot_industrial_streaming_edge_taller.ipynb`
+
 ### 📗 Nivel Mid - Arquitecturas (6-8 semanas)
 
 **Objetivo:** Diseñar arquitecturas híbridas y modernas.
