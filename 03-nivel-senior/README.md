@@ -139,6 +139,23 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Ejemplos ampliados de catálogo / data contracts productizados
 - Profundización en Data Privacy Automation y Policy-as-Code
 
+### 11. Arquitectura Empresarial para ML a Escala
+- Notebook: `11_arquitectura_empresarial_ml_escala.ipynb`
+- ML Platform empresarial: 5 capas (developer experience, workflows, ML infra, data infra, platform services)
+- Principios de diseño: self-service, abstraído, estandarizado, observable, gobernado
+- Model Registry avanzado: versionado completo, linaje (data + features + code), metadatos enriquecidos
+- Estados del modelo: development → staging → production → archived
+- Validaciones de gobernanza antes de promoción a producción
+- Arquitectura multi-modelo: estrategias de deployment (blue-green, canary, A/B, shadow, multi-armed bandit)
+- Router con distribución de tráfico y shadow mode para validación sin impacto
+- **Taller completo:** Sistema de mantenimiento predictivo (caso manufacturera)
+- Pipeline end-to-end: sensores IoT → features → predicción → scheduling de mantenimiento
+- Cálculo de ROI: fallas prevenidas, costos ahorrados, recomendación de expansión
+- Observabilidad de ML en producción: 4 capas (business, model, data quality, operational)
+- Data drift detection con KS test y alertas automáticas
+- Model performance monitoring y detección de degradación
+- Checklist completo de ML Platform: plataforma, gobernanza, operaciones, equipos y procesos
+
 ## Proyecto del Nivel
 
 Elaborar un **Documento de Arquitectura Ejecutiva** que integre:

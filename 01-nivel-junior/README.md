@@ -115,6 +115,19 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Evolución de sistemas: ciclo de vida y drivers de cambio
 - Primeros pasos en monitoreo (semana 1 y mes 1)
 
+### 15. Fundamentos de Arquitectura de Datos para IA/ML
+- Notebook: `15_fundamentos_arquitectura_datos_ia_ml.ipynb`
+- Por qué la IA/ML requiere arquitecturas especiales
+- Ciclo de vida de ML: ingesta → feature engineering → entrenamiento → inferencia
+- Componente esencial: Feature Store (offline para training, online para inference)
+- Tipos de datos: estructurados, no estructurados (texto, imagen, audio, video), multimodales
+- Diferencias críticas entre datos de entrenamiento e inferencia
+- MLOps básico: versionado triple (datos + código + modelos)
+- Arquitectura de referencia simplificada por capas
+- Pipeline completo de datos para ML con código (ingesta → features → split → guardar)
+- Requisitos de infraestructura: Data Lake, Feature Store, Model Registry, cómputo
+- Checklist de madurez: evaluador AI-ready (datos, feature engineering, MLOps, inferencia, gobernanza)
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

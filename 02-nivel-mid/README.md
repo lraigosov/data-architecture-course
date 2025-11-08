@@ -179,6 +179,21 @@ Actualmente: 4 módulos disponibles.
 - [Referencias](../04-recursos/referencias.md)
 - Casos de uso (retail) en `../04-recursos/casos-uso/`
 
+### 15. Arquitectura AI-Ready: Feature Stores y Streaming para ML
+- Notebook: `15_arquitectura_ai_ready_feature_stores_streaming.ipynb`
+- Arquitectura por capas para ML: ingesta → procesamiento → Feature Store → training/inference
+- Feature Store detallado: arquitectura dual (offline/online) con código completo
+- Diferencias tecnológicas: Hive/Delta Lake vs Redis/DynamoDB
+- Pipeline de features: batch jobs + stream processing con sincronización
+- Integración de datos multimodales: estructurados + texto + imágenes + video
+- Pipeline multimodal: procesamiento de cada tipo y combinación de features
+- Caso práctico completo: sistema de recomendación en streaming
+- Stream processor con ventanas temporales y agregaciones (5 minutos)
+- Router multi-modelo con estrategias A/B, canary y shadow mode
+- Arquitectura event-driven para ML: desacoplamiento y escalabilidad
+- Stack tecnológico recomendado por componente (ingesta, procesamiento, serving)
+- Checklist de diseño: datos, feature engineering, entrenamiento, inferencia, monitoreo, gobernanza
+
 ## Estado
 
 ✅ Módulos 1–4 disponibles  
