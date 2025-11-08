@@ -151,6 +151,39 @@
 ### Visualización
 - Tableau, Power BI, Looker
 
+## Tecnologías y Documentación Oficial (Arquitecturas Modernas)
+
+### Streaming y Procesamiento en Tiempo Real
+- Apache Kafka: https://kafka.apache.org/
+- Apache Flink (DataStream/SQL): https://nightlies.apache.org/flink/
+- Apache Spark Structured Streaming: https://spark.apache.org/structured-streaming/
+- Apache Pulsar: https://pulsar.apache.org/
+
+### Formatos y Tablas Transaccionales en Data Lakes
+- Apache Iceberg: https://iceberg.apache.org/
+- Delta Lake: https://delta.io/
+- Apache Hudi: https://hudi.apache.org/
+
+### Observabilidad, Linaje y Calidad
+- OpenLineage: https://openlineage.io/
+- DataHub (Catálogo/Lineage): https://datahubproject.io/
+- Apache Atlas: https://atlas.apache.org/
+- Great Expectations (calidad de datos): https://greatexpectations.io/
+
+### Feature Stores y Serving Online
+- Feast (Feature Store): https://feast.dev/
+- Redis (caching/online store): https://redis.io/
+
+### Vector Databases y Búsqueda Semántica
+- FAISS (Facebook AI): https://github.com/facebookresearch/faiss
+- Milvus: https://milvus.io/
+- Qdrant: https://qdrant.tech/
+
+### Catálogos/Contratos/Esquemas
+- JSON Schema: https://json-schema.org/
+- Apache Avro (schemas): https://avro.apache.org/
+- Confluent Schema Registry: https://docs.confluent.io/platform/current/schema-registry/index.html
+
 ---
 
 **Nota:** Estas referencias están organizadas para complementar cada nivel del curso. Consulta el README de cada nivel para recomendaciones específicas.
