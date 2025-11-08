@@ -194,10 +194,19 @@ Actualmente: 4 módulos disponibles.
 - Stack tecnológico recomendado por componente (ingesta, procesamiento, serving)
 - Checklist de diseño: datos, feature engineering, entrenamiento, inferencia, monitoreo, gobernanza
 
-## Estado
+### 16. Frameworks y Ecosistemas de Big Data de Última Generación (Comparativo)
+- Notebook: `16_frameworks_big_data_modernos_comparativo.ipynb`
+- Comparativa práctica: Spark vs Flink vs Ray vs Dask (latencia, throughput, facilidad de uso)
+- Almacenamiento y formatos modernos: Parquet, Delta Lake, Iceberg, Hudi (tabla comparativa)
+- NoSQL según caso de uso: document, wide-column, key-value, time-series (mapeo de decisiones)
+- Fundamentos de Vector DBs: embeddings, ANN, índices (HNSW/IVF/Flat) y casos de búsqueda semántica
+- Metodología de performance: dataset sintético, tiempos, recursos, costo por job
+- Código base de benchmark: esqueleto para comparar jobs clásicos vs estructurados
+- Resultados esperados y lectura de perfiles (CPU/memoria/IO)
 
-✅ Módulos 1–4 disponibles  
-⏳ Módulos adicionales pendientes de creación
+## Estado
+✅ Módulos 1–16 disponibles  
+⏳ Más módulos por venir (iteraciones y profundizaciones)
 
 ## Proyecto del Nivel
 

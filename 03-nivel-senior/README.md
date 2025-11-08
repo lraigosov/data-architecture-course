@@ -156,6 +156,19 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Model performance monitoring y detección de degradación
 - Checklist completo de ML Platform: plataforma, gobernanza, operaciones, equipos y procesos
 
+### 12. Arquitectura Big Data para IoT (Taller Avanzado)
+- Notebook: `12_arquitectura_big_data_iot_taller.ipynb`
+- Flujo extremo a extremo: dispositivo → gateway → broker/event hub → stream processing → almacenamiento caliente/frío
+- Diseño híbrido batch + streaming: comparación Lambda vs Kappa aplicado a IoT
+- Edge buffering y control de picos: estrategias de resiliencia y mitigación de pérdida de eventos
+- Selección de almacenamiento: time-series DB vs lakehouse (criterios latencia, retención, costo)
+- Procesamiento en caliente vs enriquecimiento diferido; agregaciones de ventana y detección de anomalías
+- Plan de escalamiento por fases (100K → 5M → 50M dispositivos) y métricas clave
+- KPIs operacionales: ingestion lag, event throughput, error rate, anomaly detection precision/recall
+- Gobernanza y costos: hot/warm/cold tiering, optimización de egress, alertas FinOps
+- Taller: diseño de arquitectura para mantenimiento predictivo IoT con justificación de componentes
+- Checklist de evaluación antes de pasar a producción (resiliencia, seguridad, observabilidad, costos)
+
 ## Proyecto del Nivel
 
 Elaborar un **Documento de Arquitectura Ejecutiva** que integre:

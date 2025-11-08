@@ -128,6 +128,16 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Requisitos de infraestructura: Data Lake, Feature Store, Model Registry, cómputo
 - Checklist de madurez: evaluador AI-ready (datos, feature engineering, MLOps, inferencia, gobernanza)
 
+### 16. Fundamentos de Big Data en la Nube
+- Notebook: `16_fundamentos_big_data_nube.ipynb`
+- Definición de Big Data (3V/5V) y su impacto en diseño
+- Almacenamiento distribuido: HDFS vs object storage en la nube (S3/ADLS/GCS)
+- Particionamiento y paralelismo: claves, tamaño de archivos, skew y balanceo
+- Cómputo escalable: clúster administrado vs serverless; autoscaling y costos
+- Formatos columnares y compresión: Parquet/ORC + compaction y tamaños óptimos
+- Introducción a batch vs streaming y cuándo elegir cada uno
+- Código: simulación de particionado/throughput y estimación de eficiencia
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:
