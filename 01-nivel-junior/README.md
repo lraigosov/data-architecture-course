@@ -138,6 +138,15 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Introducción a batch vs streaming y cuándo elegir cada uno
 - Código: simulación de particionado/throughput y estimación de eficiencia
 
+### 17. Introducción a Arquitecturas Descentralizadas (Data Mesh / Data Fabric / Capa Semántica)
+- Notebook: `17_intro_arquitecturas_descentralizadas_data_mesh_fabric_semantica.ipynb`
+- Limitaciones del enfoque centralizado y motivos de migración
+- Principios básicos de Data Mesh (datos como producto, ownership, self-service, gobernanza federada)
+- Diferencias y complementariedad entre Data Mesh y Data Fabric
+- Fundamentos de la capa semántica y knowledge graph (conceptos, relaciones, KPIs)
+- Contratos de datos básicos y métricas de producto
+- Ejercicio: definir 2 dominios y un producto por dominio con métricas de calidad
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

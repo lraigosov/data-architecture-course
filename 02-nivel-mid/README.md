@@ -204,8 +204,17 @@ Actualmente: 4 módulos disponibles.
 - Código base de benchmark: esqueleto para comparar jobs clásicos vs estructurados
 - Resultados esperados y lectura de perfiles (CPU/memoria/IO)
 
+### 17. Mini Data Mesh de Dos Dominios y Catálogo Semántico Compartido
+- Notebook: `17_mini_data_mesh_dos_dominios_catalogo_compartido.ipynb`
+- Diseño lógico de dos dominios (Ventas y Marketing) y sus data products
+- Contratos de datos: esquema, SLA frescura, reglas de calidad, semántica
+- Catálogo compartido con búsqueda por texto, tags y concepto semántico
+- Interoperabilidad mediante glosario y capa semántica ligera
+- Ejemplo de KPI compuesto (ROAS) y validación de calidad básica
+- Próximos pasos: extender a policy-as-code, catálogo real y registry de productos
+
 ## Estado
-✅ Módulos 1–16 disponibles  
+✅ Módulos 1–17 disponibles  
 ⏳ Más módulos por venir (iteraciones y profundizaciones)
 
 ## Proyecto del Nivel

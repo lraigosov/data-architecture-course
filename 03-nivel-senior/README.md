@@ -169,6 +169,17 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Taller: diseño de arquitectura para mantenimiento predictivo IoT con justificación de componentes
 - Checklist de evaluación antes de pasar a producción (resiliencia, seguridad, observabilidad, costos)
 
+### 13. Transición de Arquitectura Centralizada a Data Mesh/Fabric (Gov-Ready)
+- Notebook: `13_transicion_centralizado_a_mesh_fabric_taller_evaluacion.ipynb`
+- Situación inicial y dolores (backlog, calidad, dependencia del equipo central)
+- Target state híbrido: dominios con productos, plataforma self-service, capa semántica, gobernanza federada
+- Evaluación de readiness (ownership, plataforma, governance, semántica, seguridad, observabilidad)
+- Roadmap por fases (assessment → pilotos → plataforma → federación → escalamiento)
+- Matriz de decisión Mesh vs Fabric vs Híbrido (criterios ponderados)
+- Gobernanza federada: roles, artefactos y métricas (SLOs, freshness, SSR, costos)
+- Caso práctico guiado: diseño para 2 dominios piloto con contratos y KPIs
+- Checklist de cierre para habilitar escalamiento
+
 ## Proyecto del Nivel
 
 Elaborar un **Documento de Arquitectura Ejecutiva** que integre:
