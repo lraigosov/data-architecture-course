@@ -94,6 +94,16 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Comunicación por audiencia: ejecutivos, negocio, técnicos, operaciones
 - Ejercicio práctico: diagrama de 3 capas con adaptación por stakeholder
 
+### 13. Cultura Organizacional Data-Driven (Fundamentos)
+- Notebook: `13_cultura_organizacional_data_driven.ipynb`
+- Qué es una cultura data-driven: decisiones basadas en datos vs intuición
+- Beneficios: mejor toma de decisiones, eficiencia, innovación, ventaja competitiva
+- Barreras comunes: falta de acceso, desconfianza, data literacy, resistencia al cambio
+- Data literacy: niveles de habilidades y interpretación de datos
+- Ejemplos por rol: vendedor, marketing, operaciones, CEO
+- Código: simulador de decisión basada en datos (inventario óptimo)
+- Primeros pasos individuales y de equipo
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

@@ -107,6 +107,19 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Código: simulador VSM, calculadora de impacto con savings anuales
 - Ejercicio integrador: caso banco con capability map, VSM, ADR y slides ejecutivos
 
+### 9. Transformación Cultural Data-Driven: Estrategia Ejecutiva
+- Notebook: `09_transformacion_cultural_data_driven_estrategia.ipynb`
+- Framework de transformación: Visión/Sponsorship → Estrategia → Plataforma/Personas/Procesos → Adopción
+- Modelo de change management: Kotter's 8 Steps aplicado a datos
+- Roadmap por fases: Assessment (1m) → Quick Wins (6m) → Escalamiento (12m) → Optimización (24m)
+- Medición de madurez cultural: 5 niveles (Ad-hoc → Reactivo → Proactivo → Gestionado → Optimizado)
+- Código: calculadora de madurez con 4 dimensiones (técnica, organizacional, cultural, business)
+- ROI de cultura data-driven: costos ($1-2M) vs beneficios ($2-10M), payback 12-18 meses
+- Código: calculadora ROI con análisis de sensibilidad
+- Casos de éxito (Capital One, Netflix) y fracaso (GE Digital) con lecciones aprendidas
+- Checklist ejecutivo de readiness (12 ítems críticos)
+- Ejercicio integrador: plan de transformación para retailer 5,000 empleados
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados

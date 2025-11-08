@@ -113,6 +113,17 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Integración con catálogo y lineage para trazabilidad visual
 - Ejercicio: C4 Nivel 2 para lakehouse con anotaciones de latencia
 
+### 13. Arquitectura Habilitadora de Cultura Data-Driven (Aplicado)
+- Notebook: `13_arquitectura_habilitadora_cultura_data_driven.ipynb`
+- Conexión entre arquitectura y cultura: self-service, descubrimiento, confianza
+- Plataformas self-service: catálogo, query builder, sandboxes, queries certificadas
+- Catálogo de datos: búsqueda semántica, lineage visual, colaboración
+- Código: simulador de catálogo con búsqueda, datasets más usados, alertas de frescura
+- Contratos de datos: schema, SLAs, calidad, versionado para generar confianza
+- Métricas de adopción: engagement, self-service ratio, time-to-insight, trust score
+- Código: evaluador de madurez de adopción con 4 dimensiones
+- Patrones anti-pattern a evitar (data swamp, shadow IT, documentation drift)
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:
