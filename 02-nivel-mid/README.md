@@ -124,6 +124,18 @@ Diseñar soluciones de almacenamiento e integración escalables (Data Warehouse,
 - Código: evaluador de madurez de adopción con 4 dimensiones
 - Patrones anti-pattern a evitar (data swamp, shadow IT, documentation drift)
 
+### 14. Observabilidad y Evolución de Arquitectura (Aplicado)
+- Notebook: `14_observabilidad_evolucion_arquitectura.ipynb`
+- Stack completo de observabilidad: Prometheus/Grafana (métricas), ELK (logs), Jaeger (tracing)
+- Golden Signals adaptados a datos: Latency, Throughput, Errors, Saturation
+- Métricas operacionales: data freshness, completeness, schema drift, query performance
+- Código: sistema de monitoreo de pipelines con alertas automatizadas
+- Gestión de deuda técnica: medición (complexity, coverage, TODOs), priorización (impacto/esfuerzo)
+- Estrategias de refactoring seguro: Strangler Fig, Blue-Green, Feature Flags, Expand-Contract
+- Versionado de schemas con Schema Registry (backward/forward compatibility)
+- Código: simulador de versionado con validación de compatibilidad
+- Planificación de evolución incremental con roadmap trimestral
+
 ## Próximos Módulos (Planificados)
 
 Estos módulos aún no existen en el repositorio y se crearán posteriormente:

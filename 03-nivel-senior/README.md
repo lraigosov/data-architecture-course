@@ -120,6 +120,20 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Checklist ejecutivo de readiness (12 ítems críticos)
 - Ejercicio integrador: plan de transformación para retailer 5,000 empleados
 
+### 10. Evolución Arquitectónica y Gestión de Deuda Técnica a Escala
+- Notebook: `10_evolucion_arquitectonica_estrategica.ipynb`
+- Arquitectura evolutiva: diseño para cambio incremental guiado por fitness functions
+- Fitness Functions para datos: tests automatizados de características arquitectónicas (performance, quality, cost)
+- Código: framework de fitness functions con health score y reporting
+- Gestión de deuda técnica a escala: Tech Debt Ratio, benchmarks (0-5% saludable, >20% crítico)
+- Estrategia organizacional: 20% time, Boy Scout Rule, debt freeze, metrics dashboard
+- Modernización vs Reemplazo: matriz de decisión (valor negocio + calidad técnica)
+- Código: calculadora de decisión modernizar/reemplazar con assessment multi-sistema
+- Roadmap de modernización: caso e-commerce Hadoop→Cloud (18 meses, 4 fases)
+- Matriz de riesgos y mitigaciones (data loss, performance, budget overrun)
+- Métricas de salud arquitectónica: dashboard ejecutivo con 6 dimensiones y score general
+- Ejercicio integrador: plan de evolución 5 años para fintech con 50 pipelines
+
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
 - Ejemplos ampliados de catálogo / data contracts productizados

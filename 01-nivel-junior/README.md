@@ -104,6 +104,17 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Código: simulador de decisión basada en datos (inventario óptimo)
 - Primeros pasos individuales y de equipo
 
+### 14. Monitoreo y Mantenimiento de Arquitectura (Fundamentos)
+- Notebook: `14_monitoreo_mantenimiento_fundamentos.ipynb`
+- Por qué monitorear: prevención vs reacción, MTTD/MTTR
+- Conceptos básicos: logs (niveles), métricas (throughput, latencia), alertas (umbrales), dashboards
+- Qué es deuda técnica en datos: ejemplos y consecuencias
+- Código: simulador de incidentes según nivel de mantenimiento
+- Señales de sistemas que necesitan mantenimiento
+- Mantenimiento preventivo vs correctivo (regla 80/20)
+- Evolución de sistemas: ciclo de vida y drivers de cambio
+- Primeros pasos en monitoreo (semana 1 y mes 1)
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:
