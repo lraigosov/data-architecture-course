@@ -188,6 +188,15 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Plan de remediación y priorización (impacto vs esfuerzo)
 - Checklist IA-ready para auditoría y preparación regulatoria
 
+### 15. Arquitectura IoT Industrial en Tiempo Real (Edge + Streaming + IA)
+- Notebook: `15_arquitectura_iot_industrial_streaming_edge_taller.ipynb`
+- Requisitos: 100k sensores, latencia alerta <2s, alta disponibilidad
+- Arquitectura edge-cloud: gateway → broker → stream processing → feature store online → inferencia → feedback
+- Cálculo de latency budget y particiones de streaming (dimensionamiento inicial)
+- Feedback loop y acciones operativas (alertas, parada segura, enriquecimiento offline)
+- Gobernanza y observabilidad: Golden Signals, linaje de features/modelos, políticas de retención
+- Entregable: diagrama, matriz de decisiones, resiliencia, gobierno y observabilidad
+
 ## Proyecto del Nivel
 
 Elaborar un **Documento de Arquitectura Ejecutiva** que integre:

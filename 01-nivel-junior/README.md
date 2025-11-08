@@ -147,6 +147,15 @@ Comprender la base conceptual de la arquitectura de datos y su rol en el ecosist
 - Contratos de datos básicos y métricas de producto
 - Ejercicio: definir 2 dominios y un producto por dominio con métricas de calidad
 
+### 18. Fundamentos de Tiempo Real, Edge y Streaming
+- Notebook: `18_fundamentos_streaming_edge_cloud.ipynb`
+- Casos de uso y objetivos de latencia (fraude, mantenimiento predictivo, recomendaciones, IoT)
+- Micro-batch vs streaming continuo: diferencias y selección
+- Plataformas de streaming: Kafka, Pulsar, servicios administrados (conceptos clave)
+- Arquitectura edge-cloud: beneficios y riesgos
+- Flujo genérico Device→Edge→Broker→Processing→Serving
+- Métricas iniciales: latencia end-to-end, throughput, lag, freshness, error rate
+
 ## Ejercicios Prácticos
 
 Cada notebook incluye:

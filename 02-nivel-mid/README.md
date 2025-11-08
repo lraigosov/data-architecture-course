@@ -221,8 +221,15 @@ Actualmente: 4 módulos disponibles.
 - Propagación de retrasos de frescura a consumidores downstream
 - Reporte de gobernanza con recomendaciones y próximos pasos
 
+### 19. Streaming + Inferencia en Tiempo Real (Caso Práctico)
+- Notebook: `19_streaming_inferencia_tiempo_real_caso_practico.ipynb`
+- Flujo completo: ingesta → feature store en memoria → inferencia online → sink de resultados
+- Medición de latencias y throughput (P50/P95)
+- Modelo dummy/logístico con umbral y tasa de alertas
+- Extensiones: Kafka/Pulsar, Feature Store online, endpoint de inferencia, router de tráfico
+
 ## Estado
-✅ Módulos 1–18 disponibles  
+✅ Módulos 1–19 disponibles  
 ⏳ Más módulos por venir (iteraciones y profundizaciones)
 
 ## Proyecto del Nivel
