@@ -72,3 +72,6 @@ wheels/
 !example*.csv
 !sample*.json
 !ejemplo_ventas.csv
+
+# Directorio de artículos/publicaciones (contenido interno)
+articles/
