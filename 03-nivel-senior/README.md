@@ -180,6 +180,14 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Caso práctico guiado: diseño para 2 dominios piloto con contratos y KPIs
 - Checklist de cierre para habilitar escalamiento
 
+### 14. Gobernanza IA-Ready: Privacidad, Sesgo y Cumplimiento
+- Notebook: `14_gobernanza_ia_ready_politicas_privacidad_sesgo_taller.ipynb`
+- Ámbitos de política: privacidad/PII, acceso (RBAC/ABAC), retención, observabilidad, lineage, fairness, drift, explicabilidad
+- Evaluación automática de activos (datasets/modelos) contra políticas y detección de brechas
+- Métricas de fairness y uso de atributos protegidos; monitoreo de deriva
+- Plan de remediación y priorización (impacto vs esfuerzo)
+- Checklist IA-ready para auditoría y preparación regulatoria
+
 ## Proyecto del Nivel
 
 Elaborar un **Documento de Arquitectura Ejecutiva** que integre:

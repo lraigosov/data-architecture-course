@@ -213,8 +213,16 @@ Actualmente: 4 módulos disponibles.
 - Ejemplo de KPI compuesto (ROAS) y validación de calidad básica
 - Próximos pasos: extender a policy-as-code, catálogo real y registry de productos
 
+### 18. Observabilidad, Metadata y Linaje para IA/Big Data (Simulación)
+- Notebook: `18_observabilidad_metadata_linaje_ia_bigdata_simulacion.ipynb`
+- Métricas clave: freshness, error-rate, throughput; logs y alertas por umbral
+- Modelo de linaje (table/column-level simplificado) y análisis de impacto
+- Evento de cambio de esquema con reporte de datasets afectados
+- Propagación de retrasos de frescura a consumidores downstream
+- Reporte de gobernanza con recomendaciones y próximos pasos
+
 ## Estado
-✅ Módulos 1–17 disponibles  
+✅ Módulos 1–18 disponibles  
 ⏳ Más módulos por venir (iteraciones y profundizaciones)
 
 ## Proyecto del Nivel
