@@ -236,8 +236,15 @@ Actualmente: 4 módulos disponibles.
 - Limitaciones del brute force y motivación de ANN (FAISS/Milvus/Qdrant)
 - Ejercicios: medir impacto de dimensión y cardinalidad, comparar métricas
 
+### 21. Vector Search con FAISS: Benchmark vs Búsqueda Exacta
+- Notebook: `21_vector_search_faiss_vs_bruteforce.ipynb`
+- IndexFlatIP (producto interno) con vectores normalizados para emular coseno
+- Comparación de latencia y calidad (recall@K) frente a búsqueda exacta (NumPy)
+- Barrido opcional por N para observar escalabilidad
+- Nota: si `faiss-cpu` no está disponible, el notebook ejecuta solo búsqueda exacta
+
 ## Estado
-✅ Módulos 1–20 disponibles  
+✅ Módulos 1–21 disponibles  
 ⏳ Más módulos por venir (iteraciones y profundizaciones)
 
 ## Proyecto del Nivel
