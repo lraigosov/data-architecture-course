@@ -94,6 +94,14 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
+### Verificación Rápida (Smoke Test Helpers)
+Ejecuta un test ligero para validar imports y funciones básicas de los helpers (calidad, FinOps, linaje). No requiere conexión a backend OpenLineage.
+
+```bash
+python tests/smoke_test.py
+```
+Salida esperada (aprox.): métricas `null_rate`, `duplicate_rate`, valores FinOps y lista de funciones `emit_*`. Debe finalizar con `Smoke test OK`.
+
 ### Opción 2: Google Colab (sin instalación)
 
 1. Ir a [Google Colab](https://colab.research.google.com/)
