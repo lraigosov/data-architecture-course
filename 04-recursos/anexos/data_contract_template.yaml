@@ -1,0 +1,91 @@
+# Plantilla de Contrato de Datos (2025)
+# Ajustar y versionar en control de cambios; usar semantic versioning.
+
+version: 1.0.0
+product: <nombre_data_product>
+domain: <dominio_negocio>
+owner: <equipo_responsable>
+contact: <email_equipo>
+description: |
+  Breve descripción del propósito del producto de datos y las decisiones que habilita.
+
+sla:
+  freshness_minutes: 30  # Tier (batch_standard | critical_near_realtime | stream_insight)
+  availability_pct: 99.5
+  latency_seconds_p99: 5  # Para endpoints o features online
+  retention_days: 730
+
+classification:
+  pii_fields: [email]
+  confidentiality: interno  # interno | restringido | público
+  regulatory_tags: [gdpr]
+
+schema:
+  format: parquet
+  partitions: [fecha, region]
+  columns:
+    - name: order_id
+      type: string
+      description: Identificador único de la orden
+      quality_rules: [not_null]
+    - name: customer_id
+      type: string
+      description: Identificador de cliente
+      quality_rules: [not_null]
+    - name: total_amount
+      type: decimal(12,2)
+      description: Monto total
+      quality_rules: [not_null, range(0,100000)]
+    - name: currency
+      type: string
+      description: Código ISO moneda
+      quality_rules:
+        - not_null
+        - in_set:
+            - USD
+            - EUR
+            - MXN
+            - COP
+
+quality_rules_global:
+  - rule: duplicate_rate < 0.01
+  - rule: null_rate < 0.02
+  - rule: schema_drift_breaking == 0
+  - rule: freshness_minutes < 30
+
+lineage:
+  tool: OpenLineage
+  upstream: [raw.sales_orders, ref.exchange_rates]
+  downstream: [mart.ventas_diarias]
+
+security_access:
+  policy_version: policy-gov-v23
+  row_level: false
+  column_masking: [email]
+
+cost_center: DATA-ANALYTICS
+budget:
+  monthly_cap_usd: 500
+  alerts:
+    - threshold_pct: 0.9
+      action: notificar_finops
+
+change_management:
+  approval_flow: pull_request + revisión owner
+  breaking_change_notice_days: 14
+
+testing:
+  unit: dbt_tests + quality_rules
+  load: volumen pico simulado trimestral
+  performance: stress consulta p95
+
+deprecation:
+  sunset_candidate_after_months: 18
+  notice_days: 60
+
+observability:
+  metrics_emitted: [freshness, null_rate, duplicate_rate, cost_pipeline_daily]
+  dashboard: grafana-dp-ventas
+
+notes: |
+  Actualizar SLA si latencia crítica supera objetivo durante 3 semanas consecutivas.
