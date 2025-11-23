@@ -1,0 +1,194 @@
+# Catálogo Unificado de KPIs 2025
+# Cada entrada define nombre estandarizado, categoría, fórmula, unidad, objetivo, tier y owner.
+# Prefijos: dq_ (data quality), lin_ (linaje), gov_ (gobernanza), fin_ (FinOps), ml_ (ML/IA), arch_ (arquitectura), sec_ (seguridad), val_ (valor negocio)
+
+version: 2025-11-23
+owner: arquitectura-central
+review_frequency: quarterly
+
+tiers:
+  freshness:
+    tier_batch_standard: "< 30 min"
+    tier_critical_near_realtime: "< 5 min"
+    tier_stream_insight: "< 10 s evento→dashboard"
+    tier_ultra_stream_product: "< 60 s"
+
+kpis:
+  - name: dq_null_rate
+    category: data_quality
+    formula: null_values / total_values
+    unit: fraction
+    target: "< 0.02"
+    tiers_applicable: [all]
+    owner: data-quality-team
+    description: Porcentaje de valores nulos sobre total en activos críticos.
+  - name: dq_duplicate_rate
+    category: data_quality
+    formula: duplicate_rows / total_rows
+    unit: fraction
+    target: "< 0.01"
+    tiers_applicable: [all]
+    owner: data-quality-team
+    description: Duplicados detectados mediante clave compuesta vs total.
+  - name: dq_schema_drift_events
+    category: data_quality
+    formula: count(schema_breaking_changes per quarter)
+    unit: events
+    target: "0 breaking / quarter"
+    tiers_applicable: [all]
+    owner: data-quality-team
+    description: Cambios de esquema que rompen compatibilidad contractual.
+  - name: dq_materialization_staleness_pct
+    category: data_quality
+    formula: stale_materializations / total_materializations
+    unit: fraction
+    target: "< 0.05"
+    tiers_applicable: [batch_standard, critical_near_realtime]
+    owner: platform-engineering
+    description: Porcentaje de vistas/materializaciones fuera de SLA freshness.
+  - name: lin_coverage_pct
+    category: lineage
+    formula: assets_with_lineage / total_assets
+    unit: fraction
+    target: "> 0.85"
+    tiers_applicable: [all]
+    owner: metadata-team
+    description: Cobertura de linaje general.
+  - name: lin_critical_assets_coverage_pct
+    category: lineage
+    formula: critical_assets_with_lineage / total_critical_assets
+    unit: fraction
+    target: "> 0.90"
+    tiers_applicable: [critical_near_realtime, stream_insight]
+    owner: metadata-team
+    description: Linaje completo para activos críticos definidos por dominio y SLA.
+  - name: lin_orphan_assets_count
+    category: lineage
+    formula: count(assets without owners or lineage)
+    unit: count
+    target: "0"
+    tiers_applicable: [all]
+    owner: metadata-team
+    description: Activos sin owner o sin trazabilidad registrada.
+  - name: gov_coverage_owner_pct
+    category: governance
+    formula: assets_with_owner / total_assets
+    unit: fraction
+    target: "> 0.95"
+    tiers_applicable: [all]
+    owner: governance-office
+    description: Porcentaje de activos con owner asignado explícitamente.
+  - name: gov_policy_test_pass_rate
+    category: governance
+    formula: passed_policy_tests / total_policy_tests
+    unit: fraction
+    target: "> 0.98"
+    tiers_applicable: [all]
+    owner: governance-office
+    description: Robustez de políticas como código mediante pruebas automáticas.
+  - name: gov_pii_classification_accuracy
+    category: governance
+    formula: true_positive_pii / (true_positive_pii + false_positive_pii)
+    unit: fraction
+    target: "> 0.95"
+    tiers_applicable: [all]
+    owner: governance-office
+    description: Precisión del clasificador de PII.
+  - name: fin_waste_pct
+    category: finops
+    formula: idle_cluster_hours / total_cluster_hours
+    unit: fraction
+    target: "< 0.10"
+    tiers_applicable: [batch_standard, critical_near_realtime]
+    owner: finops-team
+    description: Porcentaje de horas de infraestructura sin trabajo útil.
+  - name: fin_cost_governance_ratio
+    category: finops
+    formula: (cost_tooling + cost_staff + cost_infra_governance) / total_data_platform_cost
+    unit: fraction
+    target: "< 0.08"
+    tiers_applicable: [all]
+    owner: finops-team
+    description: Coste relativo de gobernanza frente al coste total plataforma datos.
+  - name: fin_cost_per_critical_query
+    category: finops
+    formula: total_cost_critical_queries / number_critical_queries
+    unit: usd_per_query
+    target: "-20% YoY"
+    tiers_applicable: [critical_near_realtime]
+    owner: finops-team
+    description: Coste promedio por consulta crítica (incluye compute + storage proporcional).
+  - name: val_reuse_assets_pct
+    category: value
+    formula: assets_used_by_>=2_domains_last_90d / total_assets
+    unit: fraction
+    target: "> 0.35"
+    tiers_applicable: [all]
+    owner: product-office
+    description: Reutilización efectiva de activos entre dominios.
+  - name: arch_ttm_feature_days
+    category: architecture
+    formula: days(idea_approved_to_first_prod_use)
+    unit: days
+    target: "< 14"
+    tiers_applicable: [all]
+    owner: platform-engineering
+    description: Time-to-Market medio para nuevas características de datos.
+  - name: arch_storage_dup_ratio
+    category: architecture
+    formula: duplicated_storage_gb / total_storage_gb
+    unit: fraction
+    target: "< 0.08"
+    tiers_applicable: [all]
+    owner: platform-engineering
+    description: Proporción de datos duplicados innecesariamente.
+  - name: sec_unauthorized_access_attempts
+    category: security
+    formula: blocked_access_events / period
+    unit: count_per_week
+    target: "decreasing"
+    tiers_applicable: [all]
+    owner: security-team
+    description: Intentos de acceso no autorizado bloqueados.
+  - name: ml_prediction_drift_psi
+    category: ml_ai
+    formula: population_stability_index(pred_distribution_current, pred_distribution_reference)
+    unit: psi
+    target: "< 0.2"
+    tiers_applicable: [critical_near_realtime, stream_insight]
+    owner: ml-observability
+    description: Magnitud de drift en distribuciones de predicción.
+  - name: ml_drift_mttr_minutes
+    category: ml_ai
+    formula: minutes(time_drift_detected_to_mitigation)
+    unit: minutes
+    target: "< 180"
+    tiers_applicable: [critical_near_realtime]
+    owner: ml-observability
+    description: MTTR para incidentes de drift de modelo.
+  - name: ml_drift_cases_resolved_pct
+    category: ml_ai
+    formula: resolved_drift_cases / total_drift_cases
+    unit: fraction
+    target: "> 0.95"
+    tiers_applicable: [critical_near_realtime]
+    owner: ml-observability
+    description: Porcentaje de casos de drift mitigados satisfactoriamente.
+  - name: gov_incidentes_regulatorios
+    category: governance
+    formula: count(confirmed_regulatory_incidents per quarter)
+    unit: count
+    target: "0"
+    tiers_applicable: [all]
+    owner: governance-office
+    description: Incidentes de incumplimiento regulatorio confirmados.
+  - name: ml_roi_experimentos
+    category: ml_ai
+    formula: (beneficio_estimado - costo_total) / costo_total
+    unit: ratio
+    target: "> 1.5"
+    tiers_applicable: [all]
+    owner: ml-product
+    description: Retorno sobre inversión en experimentos de IA.
+
+# Nota: targets con tendencia (decreasing, YoY) requieren referencia temporal base.
