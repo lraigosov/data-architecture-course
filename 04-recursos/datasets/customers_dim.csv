@@ -1,0 +1,13 @@
+customer_id,created_ts,updated_ts,segment,region,loyalty_tier,email_opt_in,total_orders,lifetime_value,first_channel
+C001,2024-01-05T10:00:00Z,2025-09-30T12:00:00Z,high_value,NA,platinum,true,45,32999.50,web
+C002,2024-03-12T09:10:00Z,2025-09-28T11:00:00Z,occasional,EU,gold,false,8,799.00,store
+C003,2024-02-20T11:30:00Z,2025-09-27T09:00:00Z,high_value,NA,platinum,true,51,40210.75,web
+C004,2024-04-01T08:05:00Z,2025-09-30T13:00:00Z,,NA,silver,true,3,299.00,mobile
+C005,2024-01-15T07:45:00Z,2025-09-25T15:00:00Z,at_risk,SA,bronze,true,12,2190.00,web
+C006,2024-02-11T12:20:00Z,2025-09-29T16:00:00Z,loyal,NA,gold,true,30,5590.00,store
+C007,2024-05-02T14:00:00Z,2025-09-30T09:00:00Z,new,EU,silver,false,1,59.00,web
+C008,2024-06-18T16:40:00Z,2025-09-26T10:00:00Z,high_value,NA,platinum,true,25,14990.00,mobile
+C009,2024-03-30T10:10:00Z,2025-09-29T14:00:00Z,occasional,NA,silver,true,7,610.00,mobile
+C010,2024-07-04T09:05:00Z,2025-09-27T12:00:00Z,loyal,EU,gold,true,18,1650.00,web
+C011,2024-02-07T15:15:00Z,2025-09-28T08:30:00Z,at_risk,NA,bronze,false,6,320.00,store
+C012,2024-02-07T15:15:00Z,2025-09-28T08:30:00Z,at_risk,NA,bronze,false,6,320.00,store
