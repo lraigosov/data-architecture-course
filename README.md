@@ -5,193 +5,124 @@
 
 ## Descripción
 
-Curso práctico para formar arquitectos de datos capaces de diseñar, implementar y gobernar arquitecturas modernas, siguiendo el marco DAMA-DMBOK y las mejores prácticas de la industria.
+Curso práctico orientado a formar arquitectos de datos capaces de diseñar, implementar y gobernar arquitecturas modernas, escalables y auditables. El contenido combina fundamentos de DAMA-DMBOK con prácticas actuales de lakehouse, Data Mesh, observabilidad, FinOps, contratos de datos y preparación de plataformas para IA.
 
-> **Nota:** Este curso se enfoca en Arquitectura de Datos. Los contenidos de Ingeniería de Datos (pipelines, ETL, automatización) se abordan en un programa complementario.
+> **Nota:** Este curso se enfoca en **Arquitectura de Datos**. Los contenidos de Ingeniería de Datos (pipelines, ETL, automatización) se abordan en un programa complementario.
+
+## Tabla de Contenidos
+
+1. [Estructura del Curso](#estructura-del-curso)
+2. [Guía de Inicio Rápido](#guía-de-inicio-rápido)
+3. [Metodología](#metodología)
+4. [Evaluación](#evaluación)
+5. [Recursos y Estándares](#recursos-y-estándares)
+6. [Contribuciones](#contribuciones)
+
+---
 
 ## Estructura del Curso
 
 El programa se organiza en **tres niveles progresivos**:
 
-### 📘 Nivel Junior - Fundamentos (4-6 semanas)
+### 📘 Nivel Junior - Fundamentos
+**Objetivo:** Comprender la base conceptual de la arquitectura de datos y su rol en el ecosistema empresarial.
+- **Ubicación:** [`01-nivel-junior/`](./01-nivel-junior/)
+- **Temas clave:** OLTP vs OLAP, modelado conceptual/lógico/físico, modelado dimensional, calidad, seguridad, cloud, cultura data-driven, Big Data y streaming básico.
 
-**Objetivo:** Comprender la base conceptual de la arquitectura de datos.
+### 📗 Nivel Mid - Arquitecturas Híbridas
+**Objetivo:** Diseñar arquitecturas de datos híbridas y modernas, con criterios explícitos para batch, streaming, lakehouse, Data Mesh, semántica, observabilidad y AI-readiness.
+- **Ubicación:** [`02-nivel-mid/`](./02-nivel-mid/)
+- **Temas clave:** Data Lakehouse, Lambda/Kappa, cloud/multi-cloud, contratos de datos, catálogo, linaje, seguridad, FinOps, feature stores y búsqueda vectorial.
 
-**Contenidos disponibles:**
-- ✅ Introducción a la Arquitectura de Datos
-- ✅ OLTP vs OLAP  
-- ✅ Fundamentos de Modelado de Datos
+### 📕 Nivel Senior - Gobierno y Estrategia
+**Objetivo:** Liderar estrategias de gobierno, seguridad, optimización y operación de plataformas de datos empresariales.
+- **Ubicación:** [`03-nivel-senior/`](./03-nivel-senior/)
+- **Temas clave:** Gobierno federado, cumplimiento, FinOps, observabilidad, linaje, evolución arquitectónica, arquitectura empresarial para ML e IoT industrial.
 
-**Ubicación:** [`01-nivel-junior/`](./01-nivel-junior/)
+---
 
-### 🆕 Novedades destacadas (Q4 2025)
-- Big Data de última generación (formatos columnares y frameworks): `01-nivel-junior/16_fundamentos_big_data_nube.ipynb`, `02-nivel-mid/16_frameworks_big_data_modernos_comparativo.ipynb`
-- Arquitecturas descentralizadas y Gov-Ready (Data Mesh, Data Fabric, Capa Semántica): `01-nivel-junior/17_intro_arquitecturas_descentralizadas_data_mesh_fabric_semantica.ipynb`, `02-nivel-mid/17_mini_data_mesh_dos_dominios_catalogo_compartido.ipynb`, `03-nivel-senior/13_transicion_centralizado_a_mesh_fabric_taller_evaluacion.ipynb`
-- Observabilidad, Metadata, Linaje y Gobierno para IA/Big Data: `02-nivel-mid/18_observabilidad_metadata_linaje_ia_bigdata_simulacion.ipynb`, `03-nivel-senior/14_gobernanza_ia_ready_politicas_privacidad_sesgo_taller.ipynb`
-- Tiempo real, Edge & Streaming para IA/Big Data: `01-nivel-junior/18_fundamentos_streaming_edge_cloud.ipynb`, `02-nivel-mid/19_streaming_inferencia_tiempo_real_caso_practico.ipynb`, `03-nivel-senior/15_arquitectura_iot_industrial_streaming_edge_taller.ipynb`
+## Guía de Inicio Rápido
 
-### 📗 Nivel Mid - Arquitecturas (6-8 semanas)
+### Requisitos
+- **Software:** Python 3.8+, Git.
+- **Opcional:** Jupyter Notebook o acceso a Google Colab.
 
-**Objetivo:** Diseñar arquitecturas híbridas y modernas.
+### Instalación Local
 
-**Temas planificados:**
-- Tipologías de arquitecturas
-- Data Warehouse, Data Lake, Data Lakehouse
-- Arquitecturas Lambda y Kappa
-- Cloud y Multi-cloud
-- Capas de datos (Raw, Curated, Trusted, Gold)
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/lraigosov/data-architecture-course.git
+   cd data-architecture-course
+   ```
 
-**Ubicación:** [`02-nivel-mid/`](./02-nivel-mid/)
+2. **Configurar entorno:**
+   ```bash
+   python -m venv venv
+   # Windows:
+   venv\Scripts\activate
+   # Mac/Linux:
+   source venv/bin/activate
+   ```
 
-### 📕 Nivel Senior - Gobierno, Escalabilidad y Observabilidad (8-10 semanas)
+3. **Instalar dependencias:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**Objetivo:** Liderar estrategias de gobierno, seguridad, optimización y operación confiable a escala.
+4. **Verificar instalación:**
+   Ejecuta el smoke test para validar que los helpers funcionan correctamente.
+   ```bash
+   python tests/smoke_test.py
+   ```
 
-**Contenidos disponibles:**
-- ✅ Gobernanza, seguridad y cumplimiento → `03-nivel-senior/01_gobernanza_seguridad_cumplimiento.ipynb`
-- ✅ Escalabilidad, rendimiento y costos (FinOps) → `03-nivel-senior/02_escalabilidad_rendimiento_costos.ipynb`
-- ✅ Observabilidad, lineage y automatización → `03-nivel-senior/03_observabilidad_lineage_automatizacion.ipynb`
+### Opción Google Colab
+Puedes abrir cualquier notebook directamente en Colab pegando la URL del archivo desde GitHub en [Google Colab](https://colab.research.google.com/).
 
-Recursos de apoyo:
-- Dataset de ejemplo para métricas: `04-recursos/datasets/ejemplo_ventas.csv`
-
-**Ubicación:** [`03-nivel-senior/`](./03-nivel-senior/)
-
-## Instalación
-
-### Requisitos Previos
-
-**Conocimientos:**
-- Bases de datos básicas
-- SQL básico (SELECT, JOIN)
-- Python básico (recomendado)
-
-**Software:**
-- Python 3.8+
-- Jupyter Notebook o Google Colab
-- Git
-
-### Opción 1: Instalación Local
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/lraigosov/data-architecture-course.git
-cd data-architecture-course
-
-# Crear entorno virtual (recomendado)
-python -m venv venv
-
-# Activar entorno
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Iniciar Jupyter
-jupyter notebook
-```
-
-### Verificación Rápida (Smoke Test Helpers)
-Ejecuta un test ligero para validar imports y funciones básicas de los helpers (calidad, FinOps, linaje). No requiere conexión a backend OpenLineage.
-
-```bash
-python tests/smoke_test.py
-```
-Salida esperada (aprox.): métricas `null_rate`, `duplicate_rate`, valores FinOps y lista de funciones `emit_*`. Debe finalizar con `Smoke test OK`.
-
-### Opción 2: Google Colab (sin instalación)
-
-1. Ir a [Google Colab](https://colab.research.google.com/)
-2. Archivo > Abrir notebook > GitHub
-3. Pegar: `https://github.com/lraigosov/data-architecture-course`
-4. Seleccionar el notebook deseado
-
-## Primeros Pasos
-
-1. Comienza con [`01-nivel-junior/01_introduccion_arquitectura_datos.ipynb`](./01-nivel-junior/01_introduccion_arquitectura_datos.ipynb)
-2. Completa los notebooks en orden
-3. Realiza todos los ejercicios
-4. Consulta el [glosario](./04-recursos/glosario.md) para términos técnicos
-
-## Guía Rápida
-
-### Para Estudiantes
-1. Completa los notebooks de `01-nivel-junior/` en orden
-2. Realiza todos los ejercicios prácticos
-3. Consulta recursos en `04-recursos/` cuando sea necesario
-4. Revisa las evaluaciones en `05-evaluaciones/`
-
-### Para Instructores
-- Cada nivel tiene su README con estructura completa
-- Sistema de evaluación disponible en `05-evaluaciones/`
-- Casos de uso en `04-recursos/casos-uso/`
-- Rúbricas detalladas por nivel
-
-### Para Contribuidores
-- Lee [CONTRIBUTING.md](./CONTRIBUTING.md)
-- Revisa issues abiertos en GitHub
-- Envía pull requests con mejoras
-
-## Recursos Adicionales
-
-- **Glosario:** [`04-recursos/glosario.md`](./04-recursos/glosario.md) - 50+ términos técnicos
-- **Referencias:** [`04-recursos/referencias.md`](./04-recursos/referencias.md) - Bibliografía curada
-- **Casos de uso:** [`04-recursos/casos-uso/`](./04-recursos/casos-uso/) - Escenarios reales
-
-## Estándares y Buenas Prácticas
-
-Para garantizar consistencia, calidad y gobernanza transversal en el curso, consulta las siguientes guías:
-
-- **Mejores prácticas de arquitectura de datos:** [`docs/mejores_practicas_arquitectura_datos.md`](./docs/mejores_practicas_arquitectura_datos.md)
-- **Estándar de notebooks:** [`docs/estandar_notebooks.md`](./docs/estandar_notebooks.md)
-- **Checklist de revisión de arquitectura/data products:** [`docs/checklist_revision_arquitectura.md`](./docs/checklist_revision_arquitectura.md)
-
-Estas referencias complementan los contenidos técnicos y sirven para revisiones, contribuciones y preparación de proyectos finales.
-
-## Preguntas Frecuentes
-
-**¿Necesito experiencia previa?**  
-Solo conocimientos básicos de bases de datos y SQL.
-
-**¿Cuánto tiempo requiere?**  
-- Nivel Junior: 5-7 horas/semana durante 4-6 semanas
-- Nivel Mid: 6-8 horas/semana durante 6-8 semanas  
-- Nivel Senior: 8-10 horas/semana durante 8-10 semanas
-
-**¿Puedo usar Google Colab?**  
-Sí, todos los notebooks son compatibles.
-
-**¿Hay certificado?**  
-Al completar cada nivel con >= 70% de calificación.
-
-## Evaluación
-
-Cada nivel incluye:
-- Cuestionarios teóricos
-- Ejercicios prácticos en notebooks
-- Proyecto final
-
-Ver detalles en [`05-evaluaciones/`](./05-evaluaciones/)
+---
 
 ## Metodología
 
-- **Aprendizaje activo:** Teoría + ejercicios + evaluación
-- **Notebooks interactivos:** Jupyter con código ejecutable
-- **Casos reales:** Retail, manufactura, banca
-- **Evaluación progresiva:** Por nivel
+- **Aprendizaje activo:** cada módulo combina explicación, ejemplo ejecutable, ejercicios y criterios de revisión.
+- **Decisiones explícitas:** los diseños se justifican con trade-offs de costo, latencia, seguridad, gobierno y operación.
+- **Evidencia verificable:** los conceptos técnicos se apoyan en documentación oficial, estándares o referencias primarias.
+- **Casos aplicados:** los ejercicios trabajan escenarios de retail, manufactura, banca, IoT, analítica e IA.
 
-## Licencia
+---
 
-Este proyecto está bajo licencia MIT. Ver [LICENSE](./LICENSE) para más detalles.
+## Evaluación
+
+El curso propone la siguiente matriz de evaluación por nivel:
+
+| Nivel  | Entregable Principal                            | Herramientas de Evaluación             |
+| ------ | ----------------------------------------------- | -------------------------------------- |
+| **Junior** | Modelo conceptual y lógico                      | Cuestionario + Notebook validado       |
+| **Mid**    | Diseño arquitectónico híbrido                   | Revisión técnica y presentación oral   |
+| **Senior** | Documento de arquitectura con gobierno y FinOps | Evaluación por pares + defensa técnica |
+
+> **Criterio sugerido:** aprobar con al menos 70% en cada nivel antes de avanzar al siguiente.
+
+---
+
+## Recursos y Estándares
+
+Para garantizar consistencia y calidad, consulta:
+
+- **Glosario Técnico:** [`04-recursos/glosario.md`](./04-recursos/glosario.md)
+- **Referencias:** [`04-recursos/referencias.md`](./04-recursos/referencias.md)
+- **Mejores Prácticas:** [`docs/mejores_practicas_arquitectura_datos.md`](./docs/mejores_practicas_arquitectura_datos.md)
+- **Estándar de Notebooks:** [`docs/estandar_notebooks.md`](./docs/estandar_notebooks.md)
+- **Checklist de Revisión:** [`docs/checklist_revision_arquitectura.md`](./docs/checklist_revision_arquitectura.md)
+
+---
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Consulta [CONTRIBUTING.md](./CONTRIBUTING.md) para las guías.
+¡Tu ayuda es bienvenida!
+1. Lee [CONTRIBUTING.md](./CONTRIBUTING.md).
+2. Revisa los issues abiertos.
+3. Envía Pull Requests siguiendo el estándar del curso.
 
 ---
 
 **Autor:** Luis Raigoso (@lraigosov)  
-**Última actualización:** Noviembre 2025
+**Última actualización:** Abril 2026

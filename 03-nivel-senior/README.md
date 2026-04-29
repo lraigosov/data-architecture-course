@@ -22,10 +22,10 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - RBAC vs ABAC y controles prácticos
 - Enmascaramiento / derecho al olvido / auditoría
 - Lineage conceptual y base para catálogo
-- **Cumplimiento normativo detallado:**
-  - **GDPR (Unión Europea):** Principios, derechos del titular, DPIA, DPO, notificación 72h, multas hasta 4% ingresos
-  - **CCPA (California, EE.UU.):** Derechos del consumidor, opt-out de venta, diferencias vs GDPR
-  - **Colombia (Ley 1581/2012):** Habeas Data, consentimiento explícito, datos sensibles, registro SIC, sanciones
+- **Cumplimiento normativo aplicado:**
+  - **GDPR (Unión Europea):** principios, derechos del titular, DPIA, DPO y gestión de incidentes.
+  - **CCPA/CPRA (California, EE.UU.):** derechos del consumidor, opt-out y diferencias prácticas frente a GDPR.
+  - **Colombia (Ley 1581/2012):** habeas data, autorización, datos sensibles, deberes del responsable y gestión ante la SIC.
 - **Monitoreo y reporte de compliance:** Inventario de datos personales, DPIA, políticas/procedimientos, capacitación, auditorías, gestión de incidentes, dashboard de métricas DSAR
 - **Ejercicio integrador:** Caso RetailCorp (roles/RACI/clasificación/lineage/políticas/workflow) en `../04-recursos/casos-uso/caso_integrador_gobierno_retail.md`
 
@@ -50,7 +50,7 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
   - Dashboard completo (9 paneles) con métricas en tiempo real
 - Estrategias FinOps (right-sizing, scheduling, tiering, Z-order, compaction)
 - Métricas de eficiencia y accountability de costos
-- **Ejercicio integrador avanzado:** Migración multi-cloud con reducción 30% costos
+- **Ejercicio integrador avanzado:** migración multi-cloud con hipótesis de ahorro, riesgos y validación FinOps.
 
 ### 3. Observabilidad, Lineage y Automatización
 - Notebook: `03_observabilidad_lineage_automatizacion.ipynb`
@@ -62,7 +62,7 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 
 ### 4. Arquitecturas de Referencia y Patrones Avanzados
 - Notebook: `04_arquitecturas_referencia.ipynb`
-- **Evolución histórica:** Data Warehouse (1990s) → Data Lake (2010s) → Lakehouse (2020s) → Data Mesh (futuro)
+- **Evolución histórica:** Data Warehouse, Data Lake, Lakehouse y enfoques descentralizados como Data Mesh.
 - **Arquitecturas tradicionales:** Data Warehouse (Inmon), Data Lake (Hadoop) con ventajas/limitaciones
 - **Arquitecturas modernas:** Lakehouse (Delta/Iceberg/Hudi), Data Mesh con 4 principios
 - **Comparativa detallada:** Tabla DW/Lake/Lakehouse/Mesh según 10 dimensiones
@@ -71,7 +71,7 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - **Data Mesh profundo:** Anatomía data product con contrato completo, self-serve platform, federated governance
 - **Data Product Registry:** Simulador con registro, discovery, métricas de uso, health reports con SLA compliance
 - **ADRs (Architecture Decision Records):** Template completo con contexto/decisión/consecuencias/alternativas
-- Ejercicio integrador: Banco multinacional (50M clientes, 10 PB datos, 5 dominios, GDPR/BCBS 239)
+- Ejercicio integrador: banco multinacional ficticio con dominios, restricciones regulatorias y decisiones de plataforma.
 
 ### 5. Alineación Estratégica con Modelos de Dominio, Ontologías y Taxonomías
 - Notebook: `05_alineacion_estrategica_modelos_dominio.ipynb`
@@ -104,19 +104,19 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Diagramas de decisiones arquitectónicas (ADRs) con trade-offs visualizados
 - Capability maps: desde estrategia de negocio hasta componentes técnicos
 - Cuantificación de impacto: ROI, time-to-insight, reducción de costos
-- Código: simulador VSM, calculadora de impacto con savings anuales
+- Código: simulador VSM y calculadora de impacto con supuestos editables.
 - Ejercicio integrador: caso banco con capability map, VSM, ADR y slides ejecutivos
 
 ### 9. Transformación Cultural Data-Driven: Estrategia Ejecutiva
 - Notebook: `09_transformacion_cultural_data_driven_estrategia.ipynb`
 - Framework de transformación: Visión/Sponsorship → Estrategia → Plataforma/Personas/Procesos → Adopción
 - Modelo de change management: Kotter's 8 Steps aplicado a datos
-- Roadmap por fases: Assessment (1m) → Quick Wins (6m) → Escalamiento (12m) → Optimización (24m)
+- Roadmap por fases: assessment, quick wins, escalamiento y optimización continua.
 - Medición de madurez cultural: 5 niveles (Ad-hoc → Reactivo → Proactivo → Gestionado → Optimizado)
 - Código: calculadora de madurez con 4 dimensiones (técnica, organizacional, cultural, business)
-- ROI de cultura data-driven: costos ($1-2M) vs beneficios ($2-10M), payback 12-18 meses
-- Código: calculadora ROI con análisis de sensibilidad
-- Casos de éxito (Capital One, Netflix) y fracaso (GE Digital) con lecciones aprendidas
+- ROI de cultura data-driven: estimación basada en supuestos, sensibilidad y escenarios.
+- Código: calculadora ROI con análisis de sensibilidad.
+- Discusión de casos públicos y lecciones aprendidas, siempre vinculada a fuentes verificables cuando se use en clase.
 - Checklist ejecutivo de readiness (12 ítems críticos)
 - Ejercicio integrador: plan de transformación para retailer 5,000 empleados
 
@@ -125,14 +125,14 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Arquitectura evolutiva: diseño para cambio incremental guiado por fitness functions
 - Fitness Functions para datos: tests automatizados de características arquitectónicas (performance, quality, cost)
 - Código: framework de fitness functions con health score y reporting
-- Gestión de deuda técnica a escala: Tech Debt Ratio, benchmarks (0-5% saludable, >20% crítico)
+- Gestión de deuda técnica a escala: Tech Debt Ratio, umbrales definidos por contexto y seguimiento ejecutivo.
 - Estrategia organizacional: 20% time, Boy Scout Rule, debt freeze, metrics dashboard
 - Modernización vs Reemplazo: matriz de decisión (valor negocio + calidad técnica)
 - Código: calculadora de decisión modernizar/reemplazar con assessment multi-sistema
-- Roadmap de modernización: caso e-commerce Hadoop→Cloud (18 meses, 4 fases)
+- Roadmap de modernización: caso e-commerce Hadoop -> Cloud con fases y riesgos explícitos.
 - Matriz de riesgos y mitigaciones (data loss, performance, budget overrun)
 - Métricas de salud arquitectónica: dashboard ejecutivo con 6 dimensiones y score general
-- Ejercicio integrador: plan de evolución 5 años para fintech con 50 pipelines
+- Ejercicio integrador: plan de evolución plurianual para una fintech ficticia.
 
 ## Próximas Extensiones (Plan Futuro)
 - Taller integral end-to-end (arquitectura y trade-offs)
@@ -186,11 +186,11 @@ Fortalecer las capacidades para diseñar, gobernar, asegurar, optimizar y operar
 - Evaluación automática de activos (datasets/modelos) contra políticas y detección de brechas
 - Métricas de fairness y uso de atributos protegidos; monitoreo de deriva
 - Plan de remediación y priorización (impacto vs esfuerzo)
-- Checklist IA-ready para auditoría y preparación regulatoria
+- Checklist IA-ready para auditoría, preparación regulatoria y gestión de riesgos alineada con NIST AI RMF.
 
 ### 15. Arquitectura IoT Industrial en Tiempo Real (Edge + Streaming + IA)
 - Notebook: `15_arquitectura_iot_industrial_streaming_edge_taller.ipynb`
-- Requisitos: 100k sensores, latencia alerta <2s, alta disponibilidad
+- Requisitos de referencia: sensores industriales, alertas de baja latencia y alta disponibilidad.
 - Arquitectura edge-cloud: gateway → broker → stream processing → feature store online → inferencia → feedback
 - Cálculo de latency budget y particiones de streaming (dimensionamiento inicial)
 - Feedback loop y acciones operativas (alertas, parada segura, enriquecimiento offline)
@@ -226,9 +226,9 @@ Incluye peer review y checklist de madurez.
 
 6–8 semanas (30–40 horas) dependiendo de profundidad del proyecto final.
 
-## Certificación
+## Criterio de dominio sugerido
 
-Calificación ≥ 85% otorga certificado **Arquitecto/a de Datos Senior**.
+Si este nivel se usa como base o componente de un programa de formación, se recomienda considerar una calificación igual o superior a 85% como evidencia de dominio senior. La emisión de certificados, insignias o constancias depende únicamente del programa o institución que adopte el material.
 
 ## Recursos Adicionales
 

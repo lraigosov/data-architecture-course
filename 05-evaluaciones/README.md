@@ -10,13 +10,13 @@ Esta carpeta contiene los criterios de evaluación, rúbricas y entregables para
 - Proyecto de modelado de datos
 - Rúbrica de evaluación
 
-### 📗 [Nivel Mid](./mid/)
+### 📗 Nivel Mid
 - Casos de estudio
 - Proyecto de diseño arquitectónico
 - Presentación oral
 - Rúbrica de evaluación
 
-### 📕 [Nivel Senior](./senior/)
+### 📕 Nivel Senior
 - Documento de arquitectura empresarial
 - Defensa técnica
 - Evaluación por pares
@@ -37,17 +37,14 @@ Esta carpeta contiene los criterios de evaluación, rúbricas y entregables para
 - **Entregas tardías:** -10% por cada día de retraso
 - **Resubmisiones:** Permitidas una vez con penalización del 20%
 
-## Certificación
+## Uso como Componente Formativo
 
-### Requisitos para Certificado
-- Completar todos los niveles con calificación >= 70%
-- Presentar proyecto final de cada nivel
-- Participar en evaluación por pares (nivel Senior)
+Este repositorio no emite certificados por sí mismo. Si el material se adopta dentro de un programa de formación, se sugieren estos criterios como base para definir aprobación, constancias internas o insignias propias:
 
-### Certificado con Distinción
-- Calificación >= 90% en todos los niveles
-- Proyecto final destacado
-- Contribución a la comunidad (opcional)
+- Completar los niveles requeridos por el programa.
+- Presentar el proyecto final correspondiente.
+- Participar en revisión por pares cuando aplique.
+- Usar desempeño sobresaliente y contribuciones adicionales como criterios opcionales de reconocimiento.
 
 ## Contacto
 
