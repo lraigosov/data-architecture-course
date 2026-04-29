@@ -10,13 +10,13 @@ Esta carpeta contiene los criterios de evaluación, rúbricas y entregables para
 - Proyecto de modelado de datos
 - Rúbrica de evaluación
 
-### 📗 [Nivel Mid](./mid/)
+### 📗 Nivel Mid
 - Casos de estudio
 - Proyecto de diseño arquitectónico
 - Presentación oral
 - Rúbrica de evaluación
 
-### 📕 [Nivel Senior](./senior/)
+### 📕 Nivel Senior
 - Documento de arquitectura empresarial
 - Defensa técnica
 - Evaluación por pares

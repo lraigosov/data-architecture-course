@@ -99,13 +99,13 @@
 
 - **DAMA International:** https://www.dama.org/
 - **The Data Warehouse Institute (TDWI):** https://tdwi.org/
-- **Data Management Association (DAMA):** https://www.dama.org/
+- **The Open Group - TOGAF:** https://www.opengroup.org/togaf
 
 ### Blogs y Comunidades
 
 - **Martin Fowler - Data Architecture:** https://martinfowler.com/
 - **Data Engineering Weekly:** https://www.dataengineeringweekly.com/
-- **The Data Governance Institute:** http://www.datagovernance.com/
+- **The Data Governance Institute:** https://datagovernance.com/
 
 ### Cursos y Certificaciones
 
@@ -116,23 +116,34 @@
 ## Whitepapers de Proveedores
 
 ### AWS
-- "AWS Well-Architected Framework - Data Analytics Lens"
-- "Building a Modern Data Architecture on AWS"
+- AWS Well-Architected Framework: https://docs.aws.amazon.com/wellarchitected/latest/framework/
+- AWS Architecture Center - Analytics: https://aws.amazon.com/architecture/analytics-big-data/
 
 ### Azure
-- "Azure Data Architecture Guide"
-- "Modern Data Warehouse Architecture"
+- Azure Architecture Center - Analytics: https://learn.microsoft.com/azure/architecture/data-guide/
+- Azure Well-Architected Framework: https://learn.microsoft.com/azure/well-architected/
 
 ### Google Cloud
-- "Data Lifecycle Cloud Architecture"
-- "BigQuery Best Practices"
+- Google Cloud Architecture Framework: https://cloud.google.com/architecture/framework
+- BigQuery best practices: https://cloud.google.com/bigquery/docs/best-practices-performance-overview
+
+## Marcos y Estándares Transversales
+
+- **FAIR Principles (GO FAIR):** https://www.go-fair.org/fair-principles/
+- **FinOps Framework:** https://www.finops.org/framework/
+- **NIST AI Risk Management Framework:** https://www.nist.gov/itl/ai-risk-management-framework
+- **NIST AI RMF Generative AI Profile:** https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
+- **CloudEvents (CNCF):** https://cloudevents.io/
+- **OpenTelemetry:** https://opentelemetry.io/
+- **C4 Model:** https://c4model.com/
+- **Architecture Decision Records (ADR):** https://adr.github.io/
 
 ## Conferencias y Eventos
 
-- **Data Architecture Summit** - Anual
-- **DAMA Data Summit** - Anual
-- **Strata Data Conference** - O'Reilly
-- **DataEngConf** - Anual
+- **Enterprise Data World (DAMA):** https://dama.org/2025/11/07/2026-enterprise-data-world/
+- **Data + AI Summit:** https://www.databricks.com/dataaisummit/
+- **Current: The Next Generation of Kafka Summit:** https://current.confluent.io/
+- **ApacheCon:** https://apachecon.com/
 
 ## Revistas Especializadas
 
@@ -158,17 +169,23 @@
 - Apache Flink (DataStream/SQL): https://nightlies.apache.org/flink/
 - Apache Spark Structured Streaming: https://spark.apache.org/structured-streaming/
 - Apache Pulsar: https://pulsar.apache.org/
+- CloudEvents: https://cloudevents.io/
 
 ### Formatos y Tablas Transaccionales en Data Lakes
 - Apache Iceberg: https://iceberg.apache.org/
+- Apache Iceberg Table Spec: https://iceberg.apache.org/spec/
 - Delta Lake: https://delta.io/
 - Apache Hudi: https://hudi.apache.org/
+- Apache Parquet: https://parquet.apache.org/
+- Apache ORC: https://orc.apache.org/
 
 ### Observabilidad, Linaje y Calidad
 - OpenLineage: https://openlineage.io/
 - DataHub (Catálogo/Lineage): https://datahubproject.io/
+- OpenMetadata: https://open-metadata.org/
 - Apache Atlas: https://atlas.apache.org/
 - Great Expectations (calidad de datos): https://greatexpectations.io/
+- OpenTelemetry: https://opentelemetry.io/
 
 ### Feature Stores y Serving Online
 - Feast (Feature Store): https://feast.dev/
@@ -183,9 +200,16 @@
 - JSON Schema: https://json-schema.org/
 - Apache Avro (schemas): https://avro.apache.org/
 - Confluent Schema Registry: https://docs.confluent.io/platform/current/schema-registry/index.html
+- OpenMetadata Data Contracts: https://docs.open-metadata.org/how-to-guides/data-contracts
+- Data Contract CLI: https://cli.datacontract.com/
+
+### Seguridad, Privacidad y Policy-as-Code
+- OWASP API Security Project: https://owasp.org/www-project-api-security/
+- Open Policy Agent: https://www.openpolicyagent.org/
+- NIST Privacy Framework: https://www.nist.gov/privacy-framework
 
 ---
 
 **Nota:** Estas referencias están organizadas para complementar cada nivel del curso. Consulta el README de cada nivel para recomendaciones específicas.
 
-**Última actualización:** Noviembre 2025
+**Última actualización:** Abril 2026
