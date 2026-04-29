@@ -226,9 +226,9 @@ Incluye peer review y checklist de madurez.
 
 6–8 semanas (30–40 horas) dependiendo de profundidad del proyecto final.
 
-## Certificación
+## Criterio de dominio sugerido
 
-Calificación ≥ 85% otorga certificado **Arquitecto/a de Datos Senior**.
+Si este nivel se usa como base o componente de un programa de formación, se recomienda considerar una calificación igual o superior a 85% como evidencia de dominio senior. La emisión de certificados, insignias o constancias depende únicamente del programa o institución que adopte el material.
 
 ## Recursos Adicionales
 
