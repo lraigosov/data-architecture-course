@@ -5,7 +5,7 @@
 
 ## Descripción
 
-Curso práctico orientado a formar arquitectos de datos capaces de diseñar, implementar y gobernar arquitecturas modernas, escalables y alineadas con los marcos DAMA-DMBOK y las mejores prácticas de la industria.
+Curso práctico orientado a formar arquitectos de datos capaces de diseñar, implementar y gobernar arquitecturas modernas, escalables y auditables. El contenido combina fundamentos de DAMA-DMBOK con prácticas actuales de lakehouse, Data Mesh, observabilidad, FinOps, contratos de datos y preparación de plataformas para IA.
 
 > **Nota:** Este curso se enfoca en **Arquitectura de Datos**. Los contenidos de Ingeniería de Datos (pipelines, ETL, automatización) se abordan en un programa complementario.
 
@@ -27,19 +27,17 @@ El programa se organiza en **tres niveles progresivos**:
 ### 📘 Nivel Junior - Fundamentos
 **Objetivo:** Comprender la base conceptual de la arquitectura de datos y su rol en el ecosistema empresarial.
 - **Ubicación:** [`01-nivel-junior/`](./01-nivel-junior/)
-- **Temas Clave:** OLTP vs OLAP, Modelado (ERD, Dimensional), Calidad de Datos, Seguridad básica.
-- **Novedades:** Big Data, Streaming básico.
+- **Temas clave:** OLTP vs OLAP, modelado conceptual/lógico/físico, modelado dimensional, calidad, seguridad, cloud, cultura data-driven, Big Data y streaming básico.
 
 ### 📗 Nivel Mid - Arquitecturas Híbridas
-**Objetivo:** Diseñar arquitecturas de datos híbridas y modernas (Data Mesh, Fabric, Lakehouse).
+**Objetivo:** Diseñar arquitecturas de datos híbridas y modernas, con criterios explícitos para batch, streaming, lakehouse, Data Mesh, semántica, observabilidad y AI-readiness.
 - **Ubicación:** [`02-nivel-mid/`](./02-nivel-mid/)
-- **Temas Clave:** Data Lakehouse, Lambda/Kappa, Cloud/Multi-cloud, Capas de datos (Raw/Curated/Gold).
-- **Novedades:** Interoperabilidad, Catálogos de datos.
+- **Temas clave:** Data Lakehouse, Lambda/Kappa, cloud/multi-cloud, contratos de datos, catálogo, linaje, seguridad, FinOps, feature stores y búsqueda vectorial.
 
 ### 📕 Nivel Senior - Gobierno y Estrategia
-**Objetivo:** Liderar estrategias de gobierno, seguridad, optimización (FinOps) y operación a escala.
+**Objetivo:** Liderar estrategias de gobierno, seguridad, optimización y operación de plataformas de datos empresariales.
 - **Ubicación:** [`03-nivel-senior/`](./03-nivel-senior/)
-- **Temas Clave:** Gobernanza avanzada, FinOps, Observabilidad, Linaje, Estrategia de IA.
+- **Temas clave:** Gobierno federado, cumplimiento, FinOps, observabilidad, linaje, evolución arquitectónica, arquitectura empresarial para ML e IoT industrial.
 
 ---
 
@@ -84,9 +82,10 @@ Puedes abrir cualquier notebook directamente en Colab pegando la URL del archivo
 
 ## Metodología
 
-- **Aprendizaje Activo:** Cada módulo incluye teoría validada, ejercicios guiados y evaluación aplicada.
-- **Notebooks Interactivos:** Todo el contenido práctico se entrega en Jupyter Notebooks ejecutables.
-- **Casos Reales:** Proyectos de referencia basados en industrias como Retail, Manufactura y Banca.
+- **Aprendizaje activo:** cada módulo combina explicación, ejemplo ejecutable, ejercicios y criterios de revisión.
+- **Decisiones explícitas:** los diseños se justifican con trade-offs de costo, latencia, seguridad, gobierno y operación.
+- **Evidencia verificable:** los conceptos técnicos se apoyan en documentación oficial, estándares o referencias primarias.
+- **Casos aplicados:** los ejercicios trabajan escenarios de retail, manufactura, banca, IoT, analítica e IA.
 
 ---
 
@@ -100,7 +99,7 @@ El curso propone la siguiente matriz de evaluación por nivel:
 | **Mid**    | Diseño arquitectónico híbrido                   | Revisión técnica y presentación oral   |
 | **Senior** | Documento de arquitectura con gobierno y FinOps | Evaluación por pares + defensa técnica |
 
-> **Certificación:** Se recomienda aprobar con >= 70% en cada nivel.
+> **Criterio sugerido:** aprobar con al menos 70% en cada nivel antes de avanzar al siguiente.
 
 ---
 
@@ -109,8 +108,10 @@ El curso propone la siguiente matriz de evaluación por nivel:
 Para garantizar consistencia y calidad, consulta:
 
 - **Glosario Técnico:** [`04-recursos/glosario.md`](./04-recursos/glosario.md)
+- **Referencias:** [`04-recursos/referencias.md`](./04-recursos/referencias.md)
 - **Mejores Prácticas:** [`docs/mejores_practicas_arquitectura_datos.md`](./docs/mejores_practicas_arquitectura_datos.md)
 - **Estándar de Notebooks:** [`docs/estandar_notebooks.md`](./docs/estandar_notebooks.md)
+- **Checklist de Revisión:** [`docs/checklist_revision_arquitectura.md`](./docs/checklist_revision_arquitectura.md)
 
 ---
 
@@ -123,5 +124,5 @@ Para garantizar consistencia y calidad, consulta:
 
 ---
 
-**Autor:** Luis Raigoso (@lraigosov)
-**Última actualización:** Diciembre 2025
+**Autor:** Luis Raigoso (@lraigosov)  
+**Última actualización:** Abril 2026
