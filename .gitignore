@@ -8,6 +8,7 @@ Thumbs.db
 # Archivos de logs
 *.log
 logs/
+devlog.md
 
 # Directorios de dependencias
 node_modules/
