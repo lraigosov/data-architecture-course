@@ -2,6 +2,7 @@
 
 ![Licencia](https://img.shields.io/badge/Licencia-MIT-green)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/lraigosov?label=Sponsor&logo=GitHub%20Sponsors&color=EA4AAA)](https://github.com/sponsors/lraigosov)
 
 ## Descripción
 
