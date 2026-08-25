@@ -1,7 +1,7 @@
 # Curso Modular de Arquitectura de Datos
 
 ![Licencia](https://img.shields.io/badge/Licencia-MIT-green)
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/lraigosov?label=Sponsor&logo=GitHub%20Sponsors&color=EA4AAA)](https://github.com/sponsors/lraigosov)
 
 ## Descripción
@@ -45,7 +45,7 @@ El programa se organiza en **tres niveles progresivos**:
 ## Guía de Inicio Rápido
 
 ### Requisitos
-- **Software:** Python 3.8+, Git.
+- **Software:** Python 3.11+, Git.
 - **Opcional:** Jupyter Notebook o acceso a Google Colab.
 
 ### Instalación Local
