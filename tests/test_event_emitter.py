@@ -1,3 +1,5 @@
+import uuid
+
 import event_emitter as ee
 
 
@@ -36,7 +38,7 @@ def test_emit_uses_client_without_real_network(monkeypatch):
     ee.emit_complete(
         job_namespace="test.ns",
         job_name="test_job",
-        run_id="run-1",
+        run_id=str(uuid.uuid4()),
         inputs=[{"namespace": "ns", "name": "in"}],
         outputs=[{"namespace": "ns", "name": "out"}],
     )
