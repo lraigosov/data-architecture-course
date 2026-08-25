@@ -34,7 +34,7 @@ def test_event_emitter_importable_without_network():
     import event_emitter as ee
 
     # No invocamos emit_* aquí: harían una conexión real a localhost:5000
-    # si openlineage-client está instalado. Solo verificamos que el
+    # si openlineage-python está instalado. Solo verificamos que el
     # módulo define las funciones esperadas.
     emit_funcs = [f for f in dir(ee) if f.startswith("emit_")]
     assert {"emit_start", "emit_complete", "emit_fail"} <= set(emit_funcs)

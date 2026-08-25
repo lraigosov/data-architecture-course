@@ -8,7 +8,7 @@ def test_emit_functions_exist():
 
 
 def test_emit_without_openlineage_client_does_not_raise(monkeypatch, capsys):
-    """Sin openlineage-client instalado, _emit debe degradarse a un print, sin red."""
+    """Sin openlineage-python instalado, _emit debe degradarse a un print, sin red."""
     monkeypatch.setattr(ee, "OpenLineageClient", None)
     ee.emit_start(
         job_namespace="test.ns",

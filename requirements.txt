@@ -8,6 +8,6 @@ seaborn==0.13.0
 plotly==5.17.0
 networkx==3.2.1
 faiss-cpu==1.7.4
-openlineage-client>=0.20.0
+openlineage-python>=0.20.0
 # SciPy opcional para métricas de drift y KS; instalar solo si se requiere
 scipy>=1.11.0
