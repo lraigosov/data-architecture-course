@@ -1,5 +1,5 @@
 """Helper para emitir eventos OpenLineage (simplificado).
-Requiere: openlineage-client instalado.
+Requiere: openlineage-python instalado (expone el paquete openlineage.client).
 
 Uso:
 from helpers.event_emitter import emit_start, emit_complete
