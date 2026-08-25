@@ -37,6 +37,12 @@ jobs:
 
           last_tag="$(git tag -l 'v*' --sort=-v:refname | head -n1)"
 
+          if [ -n "$last_tag" ] && [ "$(git rev-parse "$last_tag")" = "$(git rev-parse HEAD)" ]; then
+            echo "HEAD ya esta releaseado como $last_tag (sin commits nuevos), no se crea nada."
+            echo "created=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           if [ -z "$last_tag" ]; then
             next_tag="v1.0.0"
             echo "Sin tags previos, arrancando en $next_tag"
@@ -84,8 +90,21 @@ jobs:
         if: steps.tag.outputs.created == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.tag }}
         run: |
-          gh release create "${{ steps.tag.outputs.tag }}" \
-            --title "${{ steps.tag.outputs.tag }}" \
-            --generate-notes \
-            --target main
+          set -uo pipefail
+          if gh release create "$TAG" --title "$TAG" --generate-notes --target main; then
+            exit 0
+          fi
+          # La API de GitHub a veces responde 5xx aunque el release SI se haya
+          # creado del lado del servidor (timeout en la respuesta, no en la
+          # operacion). Antes de marcar el job como fallido, confirmamos si
+          # el release ya quedo publicado.
+          echo "gh release create fallo, verificando si el release ya existe de todas formas..."
+          sleep 5
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "El release $TAG si se creo (fallo transitorio en la respuesta de la API)."
+            exit 0
+          fi
+          echo "El release $TAG realmente no se creo."
+          exit 1
