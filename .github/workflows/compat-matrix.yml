@@ -1,0 +1,47 @@
+name: Compat Matrix
+
+# Valida el curso contra versiones de Python mas nuevas que la baseline
+# (3.11, cubierta por ci.yml), instalando desde el lock exacto de cada
+# version (locks/pyX.txt). NO es un gate: un fallo aqui (p.ej. por wheels
+# de faiss-cpu que aun no existan para una version muy nueva) no bloquea
+# ningun PR -- es informativo, para saber que tan lejos llega la
+# compatibilidad real antes de mover la baseline del curso.
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: compat-matrix-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compat:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          cache-dependency-glob: locks/py${{ matrix.python-version }}.txt
+      - run: uv pip install --system -r locks/py${{ matrix.python-version }}.txt
+      - name: Lint notebook structure
+        run: python scripts/lint_notebook_structure.py --path .
+      - name: Quality gate (dataset de ejemplo)
+        run: python scripts/quality_gate.py 04-recursos/datasets/ejemplo_ventas.csv
+      - name: Unit tests
+        run: pytest tests/ -v
+      - name: Ejecutar notebooks
+        run: pytest --nbmake --nbmake-timeout=600 01-nivel-junior 02-nivel-mid 03-nivel-senior

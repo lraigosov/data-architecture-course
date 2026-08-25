@@ -1,5 +1,6 @@
+import pytest
 import pandas as pd
-import quality_rules as qr
+from curso_helpers import quality_rules as qr
 
 
 def test_null_rate_basic():
@@ -34,3 +35,17 @@ def test_evaluate_rules_pass_and_fail():
 
     result = qr.evaluate_rules(df, {"max_null_rate": 0.1})
     assert not result["results"]["max_null_rate"]
+
+
+def test_ks_pvalue_with_scipy():
+    reference = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    current = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    p = qr.ks_pvalue(reference, current)
+    assert p == pytest.approx(1.0)
+
+
+def test_ks_pvalue_without_scipy_raises_instead_of_faking_a_pvalue(monkeypatch):
+    """Sin SciPy, debe fallar explícitamente, no inventar un pseudo-p-value."""
+    monkeypatch.setattr(qr, "ks_2samp", None)
+    with pytest.raises(ImportError):
+        qr.ks_pvalue([1, 2, 3], [4, 5, 6])

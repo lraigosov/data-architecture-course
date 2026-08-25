@@ -79,7 +79,7 @@ El curso se organiza en tres niveles progresivos: **Junior**, **Mid**, y **Senio
 
 * **Visualización y diseño:** Lucidchart, Draw.io, Diagrams.net
 * **Notebooks interactivos:** Jupyter, Google Colab
-* **Gobernanza y documentación:** Atlan, Collibra, Google Data Catalog
+* **Gobernanza y documentación:** Atlan, Collibra, Google Dataplex Catalog (antes Google Data Catalog)
 * **Gestión y seguimiento:** GitHub Classroom, Notion, Trello
 
 ---

@@ -1,6 +1,6 @@
 import uuid
 
-import event_emitter as ee
+from curso_helpers import event_emitter as ee
 
 
 def test_emit_functions_exist():

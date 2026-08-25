@@ -1,14 +1,22 @@
-matplotlib==3.8.0
-pandas==2.1.1
-numpy==1.25.2
-jupyter==1.0.0
-notebook==7.0.4
-ipywidgets==8.1.1
-seaborn==0.13.0
-plotly==5.17.0
-networkx==3.2.1
-cryptography==41.0.4
-faiss-cpu==1.7.4
+# Pisos (>=), no pines exactos: se necesita para soportar varias versiones
+# de Python (3.11-3.14, ver .github/workflows/compat-matrix.yml) -- una
+# version fija solo trae wheels para un set acotado de Python ABIs.
+matplotlib>=3.9
+pandas>=2.2
+numpy>=2.1
+jupyter>=1.0.0
+notebook>=7.2
+ipywidgets>=8.1
+seaborn>=0.13
+plotly>=5.24
+networkx>=3.3
+# Sin pin exacto a proposito: 41.0.4 tenia CVEs conocidos (NULL pointer deref
+# en PKCS7/PKCS12). Se instala siempre la ultima estable; Dependabot abre PR
+# cuando salga una nueva version para mantenerlo al dia.
+cryptography>=50.0.0
+# >=1.9.0: primera linea de faiss-cpu con soporte solido de NumPy 2.x
+# (1.7.4 rompe con AttributeError: _ARRAY_API not found contra numpy>=2).
+faiss-cpu>=1.9.0
 openlineage-python>=0.20.0
 # SciPy opcional para métricas de drift y KS; instalar solo si se requiere
 scipy>=1.11.0
