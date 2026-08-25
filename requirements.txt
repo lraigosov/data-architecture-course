@@ -7,6 +7,7 @@ ipywidgets==8.1.1
 seaborn==0.13.0
 plotly==5.17.0
 networkx==3.2.1
+cryptography==41.0.4
 faiss-cpu==1.7.4
 openlineage-python>=0.20.0
 # SciPy opcional para métricas de drift y KS; instalar solo si se requiere

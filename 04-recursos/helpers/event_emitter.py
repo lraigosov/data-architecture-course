@@ -35,6 +35,7 @@ except ImportError:  # Fallback para entorno sin librería: definir stubs mínim
             self.name = name
 
 CLIENT_URL = "http://localhost:5000"  # Ajustar según despliegue Marquez / DataHub
+PRODUCER = "https://github.com/lraigosov/data-architecture-course/tree/main/04-recursos/helpers/event_emitter.py"
 
 
 def _dataset(obj: dict) -> Dataset:
@@ -51,6 +52,7 @@ def _emit(state: RunState, job_namespace: str, job_name: str, run_id: str, input
         eventTime=datetime.utcnow().isoformat()+"Z",
         run=Run(runId=run_id),
         job=Job(namespace=job_namespace, name=job_name),
+        producer=PRODUCER,
         inputs=[_dataset(d) for d in inputs],
         outputs=[_dataset(d) for d in outputs]
     )
