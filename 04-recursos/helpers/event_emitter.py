@@ -7,7 +7,7 @@ emit_start(job_namespace="curso.mid", job_name="transform_ventas", run_id="abc12
 ... proceso ...
 emit_complete(job_namespace="curso.mid", job_name="transform_ventas", run_id="abc123", inputs=[...], outputs=[{"namespace":"delta.lakehouse","name":"ventas_limpias"}])
 """
-from datetime import datetime
+from datetime import datetime, timezone
 try:
     from openlineage.client import OpenLineageClient
     from openlineage.client.run import RunEvent, RunState, Run, Job, Dataset
@@ -49,7 +49,7 @@ def _emit(state: RunState, job_namespace: str, job_name: str, run_id: str, input
     client = OpenLineageClient(url=CLIENT_URL)
     event = RunEvent(
         eventType=state,
-        eventTime=datetime.utcnow().isoformat()+"Z",
+        eventTime=datetime.now(timezone.utc).isoformat(),
         run=Run(runId=run_id),
         job=Job(namespace=job_namespace, name=job_name),
         producer=PRODUCER,

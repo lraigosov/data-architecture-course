@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "curso-arquitectura-datos-helpers"
+version = "0.1.0"
+description = "Helpers Python reutilizables del curso de Arquitectura de Datos"
+requires-python = ">=3.10"
+
+# "04-recursos" no es un identificador Python valido (empieza con digito,
+# tiene guion), asi que no se puede importar como paquete con ese nombre.
+# En vez de mover los archivos (romperia las referencias de rutas en los
+# notebooks), mapeamos el directorio existente al nombre importable
+# "curso_helpers". Instalar con `pip install -e .` habilita
+# `import curso_helpers.quality_rules` sin manipular sys.path.
+[tool.setuptools]
+package-dir = {"curso_helpers" = "04-recursos/helpers"}
+packages = ["curso_helpers"]

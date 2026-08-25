@@ -52,7 +52,7 @@ REQUIRED_KEYWORDS = {
 }
 
 def find_notebooks(root: pathlib.Path) -> List[pathlib.Path]:
-    return [p for p in root.rglob("*.ipynb") if not p.name.startswith(".")]
+    return [p for p in root.rglob("*.ipynb") if not any(part.startswith(".") for part in p.parts)]
 
 def load_notebook(path: pathlib.Path) -> Dict:
     with path.open("r", encoding="utf-8") as f:
