@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "curso-arquitectura-datos-helpers"
 version = "0.1.0"
 description = "Helpers Python reutilizables del curso de Arquitectura de Datos"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 
 # "04-recursos" no es un identificador Python valido (empieza con digito,
 # tiene guion), asi que no se puede importar como paquete con ese nombre.
