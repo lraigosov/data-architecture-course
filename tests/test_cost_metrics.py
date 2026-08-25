@@ -1,4 +1,4 @@
-import cost_metrics as cm
+from curso_helpers import cost_metrics as cm
 
 
 def test_cost_per_critical_query():

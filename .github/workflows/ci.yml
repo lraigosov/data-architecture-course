@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main, dev]
 
+# Permiso minimo: estos jobs solo leen el repo, no publican nada.
+permissions:
+  contents: read
+
 # Cancela runs anteriores del mismo PR/rama cuando llegan commits nuevos,
 # para no gastar minutos ejecutando codigo ya superado.
 concurrency:
@@ -20,11 +24,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-          cache-dependency-path: |
-            requirements.txt
-            requirements-dev.txt
-      - run: pip install -r requirements-dev.txt
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          cache-dependency-glob: locks/py3.11.txt
+      - name: Verificar que locks/py3.11.txt este actualizado
+        run: |
+          uv pip compile requirements-dev.txt --python-version 3.11 --no-header -o /tmp/fresh-py3.11.txt
+          if ! diff -u locks/py3.11.txt /tmp/fresh-py3.11.txt; then
+            echo "::error::locks/py3.11.txt esta desactualizado respecto a requirements*.txt/pyproject.toml. Corre 'bash scripts/generate_locks.sh' y commitea el resultado."
+            exit 1
+          fi
+      - run: uv pip install --system -r locks/py3.11.txt
       - name: Lint notebook structure
         run: python scripts/lint_notebook_structure.py --path .
       - name: Quality gate (dataset de ejemplo)
@@ -39,10 +50,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-          cache-dependency-path: |
-            requirements.txt
-            requirements-dev.txt
-      - run: pip install -r requirements-dev.txt
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          cache-dependency-glob: locks/py3.11.txt
+      - run: uv pip install --system -r locks/py3.11.txt
       - name: Ejecutar notebooks
         run: pytest --nbmake --nbmake-timeout=600 01-nivel-junior 02-nivel-mid 03-nivel-senior

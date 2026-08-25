@@ -59,16 +59,19 @@ def psi(reference, current, bins=10) -> float:
 
 
 def ks_pvalue(reference, current) -> float:
-    """KS test p-value si SciPy disponible; fallback aproximado: 0 si medias difieren >5%."""
-    if ks_2samp is not None:
-        return ks_2samp(reference, current).pvalue
-    # Fallback heurístico
-    ref_mean = sum(reference) / len(reference) if reference else 0
-    cur_mean = sum(current) / len(current) if current else 0
-    if ref_mean == 0:
-        return 1.0 if cur_mean == 0 else 0.0
-    diff_ratio = abs(cur_mean - ref_mean) / abs(ref_mean)
-    return 0.0 if diff_ratio > 0.05 else 0.5
+    """KS test p-value (test de Kolmogorov-Smirnov de dos muestras vía SciPy).
+
+    Requiere SciPy instalado. No hay fallback sin SciPy: un pseudo-p-value
+    basado en diferencia de medias no es un p-value real y puede llevar a
+    conclusiones estadísticas incorrectas, así que preferimos fallar de
+    forma explícita a devolver un número engañoso.
+    """
+    if ks_2samp is None:
+        raise ImportError(
+            "ks_pvalue requiere SciPy (scipy.stats.ks_2samp). "
+            "Instala scipy (ya está en requirements.txt) para usar esta función."
+        )
+    return ks_2samp(reference, current).pvalue
 
 
 def evaluate_rules(df, rules: Dict[str, Any]) -> Dict[str, Any]:

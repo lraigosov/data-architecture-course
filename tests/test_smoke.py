@@ -3,7 +3,7 @@ import importlib.util
 
 
 def test_quality_rules_importable():
-    import quality_rules as qr
+    from curso_helpers import quality_rules as qr
     import pandas as pd
 
     df = pd.DataFrame({"a": [1, 2, None, 4], "b": [10, 10, 11, 11]})
@@ -13,7 +13,7 @@ def test_quality_rules_importable():
 
 
 def test_cost_metrics_importable():
-    import cost_metrics as cm
+    from curso_helpers import cost_metrics as cm
 
     finops = cm.summarize_finops(
         total_cost_usd=150.0,
@@ -31,7 +31,7 @@ def test_cost_metrics_importable():
 
 
 def test_event_emitter_importable_without_network():
-    import event_emitter as ee
+    from curso_helpers import event_emitter as ee
 
     # No invocamos emit_* aquí: harían una conexión real a localhost:5000
     # si openlineage-python está instalado. Solo verificamos que el

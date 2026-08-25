@@ -1,0 +1,18 @@
+# NOTA: Dependabot solo actualiza requirements.txt/requirements-dev.txt
+# (no conoce locks/*.txt, que son un lock custom generado con `uv`, no un
+# uv.lock nativo). El job "checks" de ci.yml falla si el lock queda
+# desactualizado -- al mergear un PR de Dependabot que toque
+# requirements*.txt, correr `bash scripts/generate_locks.sh` y commitear
+# el resultado antes de mergear.
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
