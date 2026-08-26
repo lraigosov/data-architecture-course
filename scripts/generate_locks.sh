@@ -20,6 +20,14 @@
 # colorama) que no existen en Linux, y el chequeo de "lock actualizado"
 # en CI falla siempre por una diferencia de plataforma, no de contenido.
 #
+# --no-cache: la cache local de `uv` puede quedar con metadata de una
+# resolucion anterior (de una version distinta de algun paquete directo)
+# y producir un resultado distinto al de una maquina limpia -- confirmado
+# en la practica: con cache tibia resolvio una version de una dependencia
+# transitiva que NO coincidia con lo que arrojaba GitHub Actions (cache
+# fria) para el mismo requirements-dev.txt. Sin --no-cache el lock local
+# puede quedar "actualizado" en tu maquina pero desactualizado para CI.
+#
 # Requiere `uv` (https://docs.astral.sh/uv/). Uso:
 #   bash scripts/generate_locks.sh
 #
@@ -39,6 +47,7 @@ for v in "${VERSIONS[@]}"; do
     --python-version "$v" \
     --python-platform x86_64-unknown-linux-gnu \
     --no-header \
+    --no-cache \
     -o "locks/py${v}.txt"
 done
 

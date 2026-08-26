@@ -30,7 +30,7 @@ jobs:
           cache-dependency-glob: locks/py3.11.txt
       - name: Verificar que locks/py3.11.txt este actualizado
         run: |
-          uv pip compile requirements-dev.txt --python-version 3.11 --python-platform x86_64-unknown-linux-gnu --no-header -o /tmp/fresh-py3.11.txt
+          uv pip compile requirements-dev.txt --python-version 3.11 --python-platform x86_64-unknown-linux-gnu --no-header --no-cache -o /tmp/fresh-py3.11.txt
           if ! diff -u locks/py3.11.txt /tmp/fresh-py3.11.txt; then
             echo "::error::locks/py3.11.txt esta desactualizado respecto a requirements*.txt/pyproject.toml. Corre 'bash scripts/generate_locks.sh' y commitea el resultado."
             exit 1
