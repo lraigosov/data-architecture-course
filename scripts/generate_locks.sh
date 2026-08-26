@@ -13,6 +13,13 @@
 # contra el chequeo de "lock actualizado" en ci.yml (que compila a un
 # archivo temporal con otro nombre).
 #
+# --python-platform x86_64-unknown-linux-gnu: los workflows corren en
+# ubuntu-latest (GitHub-hosted). Sin fijar la plataforma, `uv pip compile`
+# resuelve para el SO donde lo corras -- si lo generas en Windows/Mac,
+# el lock trae paquetes especificos de esa plataforma (ej. pywinpty,
+# colorama) que no existen en Linux, y el chequeo de "lock actualizado"
+# en CI falla siempre por una diferencia de plataforma, no de contenido.
+#
 # Requiere `uv` (https://docs.astral.sh/uv/). Uso:
 #   bash scripts/generate_locks.sh
 #
@@ -30,6 +37,7 @@ for v in "${VERSIONS[@]}"; do
   echo "==> Generando locks/py${v}.txt"
   uv pip compile requirements-dev.txt \
     --python-version "$v" \
+    --python-platform x86_64-unknown-linux-gnu \
     --no-header \
     -o "locks/py${v}.txt"
 done
