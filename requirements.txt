@@ -18,5 +18,6 @@ cryptography>=50.0.0
 # (1.7.4 rompe con AttributeError: _ARRAY_API not found contra numpy>=2).
 faiss-cpu>=1.9.0
 openlineage-python>=0.20.0
-# SciPy opcional para métricas de drift y KS; instalar solo si se requiere
+# SciPy para métricas de drift y KS (quality_rules.ks_pvalue). Al estar en
+# requirements.txt se instala siempre -- no es opcional en la práctica.
 scipy>=1.11.0

@@ -4,11 +4,11 @@
 
 ### Arquitectura y Modelado de Datos
 
-1. **DAMA-DMBOK: Data Management Body of Knowledge (2nd Edition)**
+1. **DAMA-DMBOK: Data Management Body of Knowledge (2nd Edition, Revised)**
    - Autor: DAMA International
-   - Año: 2017
+   - Año: 2024 (revisión de mantenimiento; edición original 2017)
    - ISBN: 978-1634622349
-   - Descripción: Marco de referencia definitivo para la gestión de datos
+   - Descripción: Marco de referencia definitivo para la gestión de datos. La revisión 2024 es la referencia vigente para la certificación CDMP desde octubre 2024.
 
 2. **The Data Warehouse Toolkit (3rd Edition)**
    - Autor: Ralph Kimball & Margy Ross

@@ -1,5 +1,9 @@
 """Funciones de métricas de calidad y drift.
-Evita dependencias pesadas; SciPy opcional si disponible.
+
+ks_pvalue() requiere SciPy (ya está en requirements.txt del curso, no es
+opcional en este repo). El import defensivo de abajo es para que este
+módulo siga siendo importable en entornos externos sin SciPy instalado;
+en ese caso, ks_pvalue() falla explícito en vez de dar un resultado falso.
 """
 from typing import Dict, Any
 
