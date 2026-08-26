@@ -282,6 +282,7 @@ pygments==2.21.0
     #   jupyter-console
     #   nbconvert
     #   nbmake
+    #   pytest
 pyparsing==3.3.2
     # via matplotlib
 pytest==9.1.1
