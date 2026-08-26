@@ -136,4 +136,4 @@ Para garantizar consistencia y calidad, consulta:
 ---
 
 **Autor:** Luis Raigoso (@lraigosov)  
-**Última actualización:** Abril 2026
+**Última actualización:** Agosto 2026

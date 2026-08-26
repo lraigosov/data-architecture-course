@@ -1,7 +1,5 @@
 # Evaluación Nivel Senior
 
-> **Borrador inicial** generado a partir del contenido real de `03-nivel-senior/` (15 notebooks) y de los pesos ya publicados en [`03-nivel-senior/README.md`](../../03-nivel-senior/README.md#evaluación). Antes de usarlo con estudiantes, revisar el contenido pedagógico (preguntas, umbrales, ejemplos) — esto no reemplaza el criterio de un instructor del nivel.
-
 ## Componentes de Evaluación
 
 ### 1. Notebooks y Ejercicios (30%)
@@ -137,7 +135,7 @@ Un stakeholder propone migrar de Lakehouse a Data Mesh "porque está de moda". U
 ### Sección 4: ML a Escala y Gobernanza IA-Ready (Notebooks 11, 14)
 
 **Escenario 4:**
-Un modelo en producción muestra `prediction_drift_psi > 0.2`. ¿Qué política del checklist IA-ready se activa, y qué decisión de gobernanza (rollback, retrain, alerta) tomarías y por qué?
+El `DriftReport` del notebook 11 marca `is_drifted=True` (`drift_score > 0.3`) para la feature `transaction_amount` de un modelo en producción. Según la política de `drift_monitoring` del notebook 14, ¿qué brecha de gobernanza señala esto si el modelo no tenía monitoreo de drift habilitado, y qué decisión (rollback, retrain, alerta) tomarías y por qué?
 
 ---
 

@@ -1,7 +1,5 @@
 # Evaluación Nivel Mid
 
-> **Borrador inicial** generado a partir del contenido real de `02-nivel-mid/` (21 notebooks, 4 bloques) y de los pesos ya publicados en [`02-nivel-mid/README.md`](../../02-nivel-mid/README.md#evaluación). Antes de usarlo con estudiantes, revisar el contenido pedagógico (preguntas, umbrales, ejemplos) — esto no reemplaza el criterio de un instructor del nivel.
-
 ## Componentes de Evaluación
 
 ### 1. Notebooks y Ejercicios (30%)
@@ -145,9 +143,9 @@ Un dataset `gold.clientes_360` contiene email, teléfono e historial de compras.
 ### Sección 3: FinOps (Bloque 2)
 
 **Pregunta 3 (Cálculo):**
-Un clúster corre 10 horas/día pero el 40% del tiempo está idle (sin jobs activos). Calcula el `waste_pct` y propone 2 acciones concretas para reducirlo (usa `04-recursos/helpers/cost_metrics.py` como referencia de las métricas ya definidas en el curso).
+Un clúster corre 10 horas/día; de esas, 4 horas no tienen jobs activos (idle). Calcula el `waste_pct` (usa `04-recursos/helpers/cost_metrics.py` como referencia de la fórmula ya definida en el curso: `waste_pct = idle_hours / (active_hours + idle_hours)`) y propone 2 acciones concretas para reducirlo.
 
-**Respuesta esperada:** `waste_pct = idle_hours / total_hours = 4/10 = 40%`. Acciones: auto-scaling/apagado programado fuera de horario, o scheduling que agrupe jobs para reducir tiempo idle.
+**Respuesta esperada:** `waste_pct = 4 / 10 = 0.4 = 40%`. Acciones: auto-scaling/apagado programado fuera de horario, o scheduling que agrupe jobs para reducir tiempo idle.
 
 ### Sección 4: Data Mesh y Semántica (Bloques 3-4)
 
