@@ -197,7 +197,7 @@ nbformat==5.11.1
     #   nbclient
     #   nbconvert
     #   nbmake
-nbmake==1.5.4
+nbmake==1.5.5
     # via -r requirements-dev.txt
 nest-asyncio==1.6.0
     # via nbclient

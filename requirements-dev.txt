@@ -1,6 +1,6 @@
 -r requirements.txt
 pytest==8.3.3
-nbmake==1.5.4
+nbmake==1.5.5
 # Paquete local (04-recursos/helpers, mapeado a "curso_helpers"): habilita
 # los imports en tests/ sin manipular sys.path. Ver pyproject.toml.
 -e .
