@@ -160,6 +160,6 @@
 
 ## Referencias
 
-- DAMA International. (2017). *DAMA-DMBOK: Data Management Body of Knowledge* (2nd ed.)
+- DAMA International. (2024). *DAMA-DMBOK: Data Management Body of Knowledge* (2nd ed., revised) — revisión de mantenimiento de la edición 2017, referencia vigente para la certificación CDMP desde octubre 2024.
 - Kimball, R., & Ross, M. (2013). *The Data Warehouse Toolkit* (3rd ed.)
 - Inmon, W. H. (2005). *Building the Data Warehouse* (4th ed.)
