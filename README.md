@@ -66,14 +66,24 @@ El programa se organiza en **tres niveles progresivos**:
    ```
 
 3. **Instalar dependencias:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+
+   Hay dos modos, con un trade-off explícito entre reproducibilidad y estar siempre en la última versión compatible:
+
+   - **Reproducible (recomendado):** instala exactamente las versiones que valida el CI del repositorio. Elige el archivo `locks/pyX.txt` según tu versión de Python (3.11 a 3.14):
+     ```bash
+     pip install -r locks/py3.11.txt
+     ```
+   - **Última compatible / desarrollo:** instala lo más reciente que satisface los pisos declarados en `requirements.txt`. Es más flexible, pero el entorno resultante puede no coincidir exactamente con el que corre en CI:
+     ```bash
+     pip install -r requirements-dev.txt
+     ```
+
+   Ambos modos instalan también `pytest`/`nbmake` y el paquete local (`-e .`), necesarios para el siguiente paso.
 
 4. **Verificar instalación:**
-   Ejecuta el smoke test para validar que los helpers funcionan correctamente.
+   Ejecuta la suite de tests para validar que los helpers funcionan correctamente.
    ```bash
-   python tests/smoke_test.py
+   pytest tests/test_smoke.py -v
    ```
 
 ### Opción Google Colab
