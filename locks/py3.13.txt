@@ -56,7 +56,7 @@ faiss-cpu==1.15.0
     # via -r requirements.txt
 fastjsonschema==2.22.2
     # via nbformat
-fonttools==4.63.0
+fonttools==4.64.0
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
