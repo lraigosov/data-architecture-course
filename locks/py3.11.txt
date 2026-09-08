@@ -82,7 +82,7 @@ ipykernel==7.3.0
     #   jupyter-console
     #   jupyterlab
     #   nbmake
-ipython==9.16.1
+ipython==9.17.1
     # via
     #   ipykernel
     #   ipywidgets
