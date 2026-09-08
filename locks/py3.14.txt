@@ -248,7 +248,7 @@ pexpect==4.9.0
     # via ipython
 pillow==12.3.0
     # via matplotlib
-platformdirs==4.11.4
+platformdirs==4.11.7
     # via jupyter-core
 plotly==7.0.0
     # via -r requirements.txt
